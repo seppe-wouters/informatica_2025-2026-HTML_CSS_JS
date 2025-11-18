@@ -63,11 +63,11 @@
 
 .hero-background{
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Bavik_Pils_logo.svg/1200px-Bavik_Pils_logo.svg.png"); /* The image used */
-  background-color: grey;
-  height: 500px; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: contain;
+    background-color: grey;
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: contain;
 }
 
 

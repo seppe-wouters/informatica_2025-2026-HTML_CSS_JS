@@ -1,0 +1,71 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: bisque;
+}
+
+.hero{
+    min-height: 100vh;
+}
+
+.background-img{
+    background-image: url("https://img.static-rmg.be/a/view/q75/w/h/2321285/pretpark-fb-jpg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.background-img-tickets{
+    background-image: url("https://cdn.pixabay.com/photo/2018/03/19/00/40/entries-3238747_1280.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 75%;
+}
+
+.hero h1,p{
+    text-align: center;
+}
+
+#oplijsting{
+    font-weight: bold;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container img{
+    display: block;
+    margin: 0 auto;
+}
+
+.nav-links ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+}
+
+.nav-links ul a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-links ul li a:hover {
+    background-color: lightgrey;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+.img {
+    border: black solid 2px;
+    border-radius: 10px;
+}

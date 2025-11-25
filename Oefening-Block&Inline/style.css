@@ -65,3 +65,37 @@
     vertical-align: middle;
 }
 
+.hero_block{
+    justify-items: center;
+    align-items: center;
+}
+
+.blok{
+    display: block;
+    background-color: chocolate;
+    border: solid black 1px;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.item{
+    display: block;
+    background-color: chocolate;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px;
+}
+
+.vak{
+    display: inline;
+    background-color: chocolate;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 3px;
+    padding: 5px;
+}
+

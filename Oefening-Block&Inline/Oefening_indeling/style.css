@@ -1,0 +1,75 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header{
+    text-align: center;
+    border: solid black 2px;
+    padding: 20px;
+}
+
+#LogoNav *{
+    display: inline-block;
+    border: solid black 2px;
+    height: 20px;
+}
+
+#Logo,#nav {
+    width: 23%;
+    text-align: center;
+}
+
+#witruimte {
+    width: 50%;
+    vertical-align: middle;
+}
+
+#main{
+    text-align: center;
+    border: solid black 2px;
+    padding: 20px;
+}
+
+#ArtSide {
+    border: solid black 2px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+#article{
+    border: solid black 2px;
+    display: inline-block;
+    text-align: center;
+}
+
+#sidebar{
+    border: black solid 2px;
+    display: inline-block;
+    text-align: center;
+}
+
+img {
+    width: 50px;
+}
+
+#article div{
+    border: solid black 2px;
+    margin: 5px;
+}
+
+#sidebar div{
+    margin: 5px;
+    border: solid black 2px;
+}
+
+#sidebar div ul{
+    display: inline-block;
+    justify-content: center;
+
+}
+
+#footer{
+    text-align: center;
+    border: solid black 2px;
+    padding: 30px;
+}

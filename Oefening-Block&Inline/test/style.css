@@ -1,0 +1,10 @@
+.hero{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+.addedDiv{
+    background-color: blue;
+    margin: 5px;
+    padding: 3px;
+}

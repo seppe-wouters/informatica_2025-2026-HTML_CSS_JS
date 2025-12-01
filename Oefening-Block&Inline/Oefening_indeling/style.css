@@ -8,22 +8,23 @@
     padding: 20px;
 }
 
-#LogoNav *{
-    display: inline-block;
+#LogoNav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     border: solid black 2px;
     height: 20px;
 }
 
-#Logo,#nav {
-    width: 23%;
+#Logo,#nav,#witruimte {
+    border: black solid 2px;
     text-align: center;
 }
-
+/*
 #witruimte {
     width: 50%;
     vertical-align: middle;
 }
-
+*/
 #main{
     text-align: center;
     border: solid black 2px;

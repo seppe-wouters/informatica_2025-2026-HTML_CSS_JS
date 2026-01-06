@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While - inner</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="divResult"></div>
+
+    <script>
+        // Declaratie variabelen
+        let getal;
+
+        // Elementen ophalen
+        const divResult = document.querySelector('#divResult');
+
+        // Herhalen TOTDAT de gebruiker een geldig getal heeft ingevoerd (1-10)
+        do {
+            // Vraag de gebruiker om een getal tussen 1 en 10
+            getal = parseInt(prompt("Voer een getal in tussen 1 en 10:"));
+            console.log("Je hebt ingevoerd:", getal);
+        } while (getal < 1 || getal > 10);
+
+        // De gebruiker heeft een geldig getal ingevoerd
+        divResult.innerHTML = "Je hebt ingevoerd: " + getal;
+
+    </script>
+</body>
+
+</html>

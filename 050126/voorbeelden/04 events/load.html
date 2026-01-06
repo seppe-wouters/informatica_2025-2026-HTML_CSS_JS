@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>load</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="status"></div>
+    <img src="img/loading.gif" alt="Loading" style="display: block;" id="spinner">
+
+    <script>
+        // Declaratie van het body element
+        const body = document.getElementsByTagName("body");
+        const status = document.getElementById("status");
+        const spinner = document.getElementById("spinner");
+
+        const loading = () => {
+            status.innerHTML = "De pagina is nog niet geladen.";
+            // We bouwen voor dit voorbeeld een vertraging in van 2 seconden
+            setTimeout(() => {
+                status.innerHTML = "De pagina is geladen.";
+                loading.style.display = "none";
+            }, 2000); // 2000 milliseconden = 2 seconden
+        }
+
+        // Event listener
+        body.addEventListener("load", loading(), false);
+
+    </script>
+</body>
+
+</html>

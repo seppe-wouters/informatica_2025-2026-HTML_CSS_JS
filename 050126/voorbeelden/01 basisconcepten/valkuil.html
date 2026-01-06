@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>Valkuil tekst vs getal</title>
+</head>
+
+<body>
+    <h1>Som maken (valkuil zonder parseInt of parseFloat)</h1>
+    <div id="divResult"></div>
+
+    <script>
+        // Elementen ophalen
+        const res = document.getElementById("divResult");
+
+        // Vraag 2 getallen aan de gebruiker
+        const getal1 = parseInt(prompt('Vul het eerste getal in', '0'));
+        // const getal1 = parseInt(prompt('Vul het eerste getal in', '0'));
+
+        const getal2 = parseInt(prompt('Vul het tweede getal in', '0'));
+        // const getal2 = parseInt(prompt('Vul het tweede getal in', '0'));
+
+        // Bereken de som
+        // Met de plus operator kunnen we twee getallen optellen maar ook twee teksten aan elkaar plakken (concatenatie)
+        const uitkomst = getal1 + getal2;
+
+        // Toon de uitkomst        
+        res.innerHTML = "De som van " + getal1 + " en " + getal2 + " is: " + uitkomst;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" />
+        <title>Meervoudige keuze - Else If</title>
+    </head>
+
+    <body>
+
+        <div id="divResult"></div>
+
+        <script>
+        // declareren variabelen
+        const dag = 5;
+        const tekst = "";
+
+        // Elementen ophalen
+        const divResult = document.getElementById("divResult");
+
+        // Controleer de dag met else
+        if (dag === 1) {
+            tekst = "Vandaag is het maandag.";
+        } else if (dag === 2) {
+            tekst = "Vandaag is het dinsdag.";
+        } else if (dag === 3) {
+            tekst = "Vandaag is het woensdag.";
+        } else if (dag === 4) {
+            tekst = "Vandaag is het donderdag.";
+        } else if (dag === 5) {
+            tekst = "Vandaag is het vrijdag.";
+        } else if (dag === 6) {
+            tekst = "Vandaag is het zaterdag.";
+        } else if (dag === 7) {
+            tekst = "Vandaag is het zondag.";
+        } else {
+            tekst = "Onbekende dag.";
+        }
+
+        // We plaatsen de tekst in divResult
+        divResult.innerHTML = tekst;
+
+    </script>
+
+    </body>
+
+</html>

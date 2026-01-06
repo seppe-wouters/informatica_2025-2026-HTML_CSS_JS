@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <link rel="shortcut icon" href="#">
+        <title>If-Else genest - Voorbeeld Bioscoopticket</title>
+
+    </head>
+
+    <body>
+        <h1>If-Else genest voorbeeld: Bioscoopticket</h1>
+        <p>Kijk in de console om de resultaten te zien.</p>
+
+        <script>
+        // Voorbeeldwaarden
+        const leeftijd = 22;
+        const heeftTicket = false;
+
+        if (leeftijd >= 16) {
+            // Geneste if: controleer of ze ook een ticket hebben
+            if (heeftTicket == true) {
+                console.log("Je mag binnen in de bioscoop.");
+            } else {
+                console.log("Je bent oud genoeg, maar je moet nog een ticket kopen.");
+            }
+        } else {
+            console.log("Je bent te jong voor deze film.");
+        }
+    </script>
+
+    </body>
+
+</html>

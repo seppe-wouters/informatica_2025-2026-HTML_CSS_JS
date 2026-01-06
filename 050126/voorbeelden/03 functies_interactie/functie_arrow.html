@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Arrow functie</h1>
+    <button id="mijnKnop">Klik mij</button>
+
+    <script>
+
+        // Anonieme functie toegewezen aan een knop, maar nu met een arrow functie
+        const knop = document.querySelector('#mijnKnop');
+        knop.addEventListener('click', () => alert('Klik mij!'), false);
+
+        // Arrow functie zonder argument
+        const testFunctie = () => alert("Hello again!");
+
+        // Aanroepen
+        testFunctie();
+
+        // Arrow functie met 3 argumenten om volume te berekenen
+        const getVolume = (a, b, c) => a * b * c;
+
+        /*
+        // Met function methode zou dit zijn
+        function getVolume(a, b, c) {
+            return a * b * c;
+        }
+        */
+
+        // Aanroepen
+        const volume = getVolume(2, 3, 4);
+        console.log(volume);
+
+    </script>
+</body>
+
+</html>

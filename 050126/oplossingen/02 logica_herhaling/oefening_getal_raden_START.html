@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+
+    <title>Oefening getal raden</title>
+</head>
+
+<body>
+    <h1>Raad een getal van 1 t.e.m. 10</h1>
+    <div id="resultaat"></div>
+    <input id="input" type="number">
+    <button id="guess">Guess</button>
+    
+
+    <script>
+        // Declaratie
+        const divEl = document.getElementById("resultaat")
+        let aantalPogingen = 0
+
+        // Genereer een willekeurig getal tussen 1 en 10
+        const random = Math.floor(Math.random() * 10) + 1
+        console.log(random)
+        
+        document.getElementById("guess").addEventListener("click", ()=>{
+            let input = document.getElementById("input").value
+
+            if (input == random) {
+                divEl.innerHTML = `Het is juist het getal was ${random} en je hebt het gedaan in ${aantalPogingen} keer`
+            } else if (input > random) {
+                divEl.innerHTML = "lager"
+                aantalPogingen++;
+            } else {
+                divEl.innerHTML = "hoger"
+                aantalPogingen++;
+            }
+        })
+
+
+
+
+
+
+
+
+
+        // Laat de gebruiker raden
+        /*
+        let input = 0
+        do {
+            input = parseInt(prompt("welk getal kies je"))
+            aantalPogingen++;
+        } while (input != random);
+
+        // Toon het aantal pogingen
+        divEl.innerHTML = `Het is juist het getal was ${random} en je hebt het gedaan in ${aantalPogingen} keer`
+        */
+        
+        
+    </script>
+
+</body>
+
+</html>

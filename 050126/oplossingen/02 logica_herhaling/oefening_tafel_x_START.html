@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De tafel van x</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>De tafel van x</h1>
+    <div id="divResult"></div>
+
+    <script>
+        // Element(en) opvragen
+        const getal = parseInt(prompt("welk getal"));
+        
+        // Invoer getal
+        let divEl = document.getElementById("divResult");
+
+        for (let i = 1; i < 11; i++) {
+            let elem = document.createElement("p")
+            elem.innerHTML = `${i}x${getal}=${i*getal}`
+            divEl.appendChild(elem)
+        }
+
+        // We geven de tafel weer van een bepaald getal
+        
+    </script>
+
+</body>
+
+</html>

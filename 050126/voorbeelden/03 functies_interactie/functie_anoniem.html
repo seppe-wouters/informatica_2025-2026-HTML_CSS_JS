@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonieme functie</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Anonieme functie</h1>
+    <button id="mijnKnop">Klik mij</button>
+
+
+    <script>
+        // Anonieme functie die uitgevoerd wordt wanneer de pagina geladen is
+        window.addEventListener('load', function () {
+            alert('Ik ben geladen ;-)');
+            // ... overige code in de functie
+        }, false);
+
+        // Anonieme functie die uitgevoerd wordt wanneer de gebruiker het scherm verandert
+        window.addEventListener('resize', function () {
+            alert('Hé... jij trekt aan mij!');
+        }, false);
+
+        // Anonieme functie toegewezen aan een knop
+        const knop = document.querySelector('#mijnKnop');
+        knop.addEventListener('click', function () {
+            alert("Knop geklikt!");
+        });
+
+    </script>
+
+</body>
+
+</html>

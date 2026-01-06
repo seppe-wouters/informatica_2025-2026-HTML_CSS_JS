@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#">
+
+        <title>Oefening tafel van een getal met functies</title>
+    </head>
+
+    <body>
+        <div>
+            <label for="inputGetal">Voer een getal in:</label>
+            <input type="number" id="inputGetal" value="0" step="1">
+            <button id="buttonTafel">Toon tafel</button>
+        </div>
+
+        <div id="result"></div>
+
+        <script>
+        // Element(en) ophalen
+        let input = 0
+        const divEl = document.getElementById("result")
+        // Functie om de tafel van een getal te berekenen en te tonen
+        function GeefTafel(number) {
+            divEl.innerHTML = ""
+            for (let i = 1; i <= 10; i++) {
+                let elem = document.createElement("p")
+                elem.innerHTML = `${i}x${number}=${i*number}`
+                divEl.appendChild(elem)
+            }
+        }
+
+        document.getElementById("buttonTafel").addEventListener("click", ()=>{
+            input = document.getElementById("inputGetal").value
+            GeefTafel(input)
+        })
+
+        document.getElementById("inputGetal").addEventListener("keydown", ()=>{
+            if (event.code == "Enter"){
+                input = document.getElementById("inputGetal").value
+                GeefTafel(input)
+            }
+        })
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventlistener</title>
+    <link rel="shortcut icon" href="#">
+    <style>
+        div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>De som van twee getallen in een inputveld</h1>
+    <div>
+        <input type="number" id="getal1" placeholder="Voer eerste getal in" step="0.5" value="0">
+    </div>
+    <div>
+        <input type="number" id="getal2" placeholder="Voer tweede getal in" step="0.5" value="0">
+    </div>
+
+    <div>
+        <button id="berekenKnop">Bereken Som</button>
+        <button id="resetKnop">Reset</button>
+    </div>
+
+    <div id="resultaat"></div>
+
+    <script>
+        // Declaratie
+        const but = document.getElementById("berekenKnop");
+        const reset = document.getElementById("resetKnop");
+
+        const get1 = document.getElementById("getal1");
+        const get2 = document.getElementById("getal2");
+
+        const res = document.getElementById("resultaat");
+
+        // Arrow functie met twee parameters
+        const berekenSom = (a, b) => {
+            return (a + b).toFixed(1);
+        }
+
+        // Anonieme functie toegewezen aan een knop
+        but.addEventListener("click", () => {
+            const getal1 = parseFloat(get1.value);
+            const getal2 = parseFloat(get2.value);
+
+            // Controleer of de invoer geldig is
+            if (isNaN(getal1) || isNaN(getal2)) {
+                document.getElementById("resultaat").innerHTML = "Voer twee geldige getallen in.";
+            } else {
+                // Gebruik de arrow functie en toon het resultaat
+                const som = berekenSom(getal1, getal2);
+                res.innerHTML = "De som is: " + som;
+            }
+        }, false);
+
+        // Anonieme functie toegewezen aan een knop
+        reset.addEventListener("click", () => {
+            get1.value = 0;
+            get2.value = 0;
+            res.innerHTML = "";
+        }, false);
+
+    </script>
+
+</body>
+
+</html>

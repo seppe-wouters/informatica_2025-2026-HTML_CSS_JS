@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseout</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="resultaat">Ga met de cursor over de afbeelding</div>
+    <img src="img/spain-01.jpg" id="foto">
+
+    <script>
+        // Declaratie
+        const res = document.getElementById("resultaat");
+        const afb = document.getElementById("foto");
+
+        // Arrow functies
+        const mouseOverFunctie = () => {
+            res.innerHTML = "Je cursor beweegt zich momenteel <strong>WEL</strong> over de afbeelding.";
+            afb.style.border = "2px solid green";
+            afb.style.opacity = 0.75;
+        }
+
+        const mouseOutFunctie = () => {
+            res.innerHTML = "Je cursor beweegt zich momenteel <strong>NIET</strong> over de afbeelding.";
+            afb.style.border = "2px solid red";
+            afb.style.opacity = 1;
+        }
+
+        // Meerdere event listeners op element !!
+        afb.addEventListener("mouseover", mouseOverFunctie, false);
+        afb.addEventListener("mouseout", mouseOutFunctie, false);
+    </script>
+</body>
+
+</html>

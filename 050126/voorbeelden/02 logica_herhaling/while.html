@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While - inner</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="divResult"></div>
+    <script>
+        // Elementen ophalen
+        const res = document.querySelector('#divResult');
+
+        // Declareren variabelen
+        let startGetal = 50;
+        let eindGetal = 200;
+        let cummul = 0;
+
+        // Herhalen ZOLANG startGetal kleiner is dan  eindGetal 
+        while (startGetal < eindGetal) {
+            cummul += startGetal;
+            startGetal++;
+        }
+
+        // Resultaat weergeven
+        res.innerHTML = '<p>Cummulatieve som: ' + (cummul) + '</p>';
+
+    </script>
+</body>
+
+</html>

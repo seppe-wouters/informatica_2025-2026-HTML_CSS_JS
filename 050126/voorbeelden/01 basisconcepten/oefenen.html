@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Oefenen</title>
+    </head>
+    <body>
+        <div id="tekst"></div>
+        <div id="test"></div>
+        <script>
+            const divEl = document.getElementById("tekst")
+            let elem = document.createElement("p")
+            elem.innerHTML = "voornaam: bob"
+            let elem2 = document.createElement("p")
+            elem2.innerHTML = "achternaam: de bouwer "
+            divEl.appendChild(elem)
+            divEl.appendChild(elem2)
+            
+            divEl2 = document.getElementById("test")
+
+            for (let index = 0; index < 24; index++) {
+                elem3 = document.createElement("div")
+                elem3.classList.add("test")
+
+                divEl2.appendChild(elem3)
+            }            
+        </script>
+
+        <style>
+            #test{
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+
+            .test{
+                min-block-size: 50px;
+                margin: 5px;
+                background-color: black;
+            }
+        </style>
+    </body>
+</html>

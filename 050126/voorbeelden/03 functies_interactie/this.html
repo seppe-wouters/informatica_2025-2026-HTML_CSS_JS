@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functies vs Arrow functie (this)</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <button id="knop1">Knop 1</button>
+    <button id="knop2">Knop 2</button>
+    <button id="knop3">Knop 3</button>
+
+
+    <script>
+        // Elementen ophalen
+        const knop1 = document.getElementById("knop1");
+        const knop2 = document.getElementById("knop2");
+        const knop3 = document.getElementById("knop3");
+
+        // Normale functie: 'this' verwijst naar het element dat geklikt is
+        const klikHandler = function () {
+            this.textContent = "Je klikte mij!";
+            this.style.backgroundColor = "lightblue";
+        };
+
+        // Eventlistener toevoegen
+        knop1.addEventListener("click", klikHandler);
+        knop2.addEventListener("click", klikHandler);
+        knop3.addEventListener("click", klikHandler);
+
+        // Arrow functie voorbeeld (doet niet wat je verwacht)
+        const arrowHandler = () => {
+            console.log(this); // 'this' verwijst naar window, niet naar de knop
+        };
+
+        // Uncomment om te testen:
+        // knop1.addEventListener("click", arrowHandler);
+
+    </script>
+</body>
+
+</html>

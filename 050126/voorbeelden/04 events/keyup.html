@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyup</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <input type="text" id="mijnInput">
+    <p id="resultaat"></p>
+
+    <script>
+        // Declaratie
+        const input = document.getElementById("mijnInput");
+        const res = document.getElementById("resultaat");
+
+        // Arrow function en we vangen het event op
+        const mijnFunctie = (event) => {
+            res.textContent = input.value;
+
+            // Logging => open de console in je browser
+            console.log(event.key);
+            console.log(event);
+        }
+
+        // Event listener
+        input.addEventListener("keyup", mijnFunctie, false);
+    </script>
+</body>
+
+</html>

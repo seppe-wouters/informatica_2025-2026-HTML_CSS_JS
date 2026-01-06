@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Willekeurige Spanje foto</h1>
+    <p>Klik op de foto om een willekeurige foto te tonen</p>
+
+    <div>
+        <img id="foto" src="img/spain-01.jpg" alt="Random foto">
+    </div>
+
+    <script>
+        const knop = document.getElementById("btn");
+        const foto = document.getElementById("foto");
+
+        function randomFoto() {
+            // willekeurig getal tussen 1 en 16
+            let wilGetal = Math.floor(Math.random() * 16) + 1;
+            // altijd 2 cijfers (01, 02, ..., 19)
+            wilGetal = wilGetal.toString().padStart(2, '0');
+
+            // const bestandsnaam = `img/spain-${nr.toString().padStart(2, '0')}.jpg`;
+            const bestandsnaam = "img/spain-" + wilGetal + ".jpg";
+
+            // Wijzig het src attribuut van de foto
+            foto.src = bestandsnaam;
+
+            // console.log("Nieuwe foto:", bestandsnaam);
+        }
+
+        // Event listener
+        foto.addEventListener("click", randomFoto, false);
+
+        // Start met een willekeurige foto
+        randomFoto();
+
+    </script>
+</body>
+
+</html>

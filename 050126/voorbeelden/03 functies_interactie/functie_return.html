@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functie met return</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Resultaat retourneren uit een functie</h1>
+    <div id="resultaat"></div>
+
+    <script>
+        // Declaratie 
+        divResult = document.getElementById("resultaat");
+
+        // Opvragen getal
+        const getal = parseInt(prompt("Geef een getal in", 1));
+
+        // De functie geeft iets terug, dus we moeten dit opvangen in een variabele
+        const faculteit = berekenFaculteit(getal);
+
+        // We tonen het resultaat in divResult
+        divResult.innerHTML = "De faculteit van " + getal + " is: " + faculteit;
+
+
+        // Naam van de functie is berekenFaculteit.
+        // De naam "getal" is zelf te kiezen voor deze variabele.
+        function berekenFaculteit(get) {
+            let resultaat = 1;
+
+            // We bereken de faculteit
+            for (let i = 1; i <= get; i++) {
+                resultaat *= i;
+            }
+
+            // We geven de waarde via resultaat door via de functie
+            return resultaat;
+        }
+    </script>
+
+</body>
+
+</html>

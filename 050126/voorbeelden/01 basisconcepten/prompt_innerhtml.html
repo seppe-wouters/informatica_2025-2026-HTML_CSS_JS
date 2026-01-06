@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt en innerHTML</title>
+</head>
+
+<body>
+    <div id="tekst"></div>
+
+    <script>
+        // Declareren variabelen
+        const divResult = document.getElementById('tekst');
+
+        const postcode = prompt('Vul uw postcode in', '0000');
+        const tekst = 'De postcode die u invoerde was: ' + postcode;
+
+        // We plaatsen de tekst in de div met id="tekst"
+        divResult.innerHTML = tekst;
+    </script>
+</body>
+
+</html>

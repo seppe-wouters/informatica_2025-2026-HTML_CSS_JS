@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functies met of zonder parameters</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+
+    <script>
+        // Aanroep functie zonder parameter (argument)
+        toonBoodschap();
+
+        // Functie zonder argumenten
+        function toonBoodschap() {
+            alert("Hallo iedereen!");
+        }
+
+
+        // Functie met één argument en één optioneel argument
+        function telOp(a, b = 100) {
+            return a + b;
+        }
+
+        // Functie met (optionele) argumenten
+        console.log(telOp(10));
+        console.log(telOp(10, 5));
+    </script>
+</body>
+
+</html>

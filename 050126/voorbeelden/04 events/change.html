@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <input type="text" id="mijnInput">
+
+    <p id="resultaat"></p>
+
+    <script>
+        // Declaratie
+        const input = document.getElementById("mijnInput");
+        const res = document.getElementById("resultaat");
+
+
+        // Arrow function
+        const mijnFunctie = () => {
+            res.innerHTML = input.value;
+        }
+
+        // Event listener
+        // Wijziging pas zichtbaar nadat je uit het tekstvak klikt
+        input.addEventListener("change", mijnFunctie, false);
+
+    </script>
+</body>
+
+</html>

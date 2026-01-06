@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventlistener</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body id="pagina">
+
+    <button id="mijnButton">Push me</button>
+    <p id="res"></p>
+
+    <script>
+        // Declaratie
+        const but = document.getElementById("mijnButton");
+        const res = document.getElementById("res");
+        const pag = document.getElementById("pagina");
+
+        // Arrow function
+        const wijzigStijl = () => {
+            // We wijzigen de achtergrond en de tekst via CSS properties
+            pag.style.backgroundColor = "darkred";
+            pag.style.color = "white";
+            res.innerHTML = "Ik krijg een leuke kleur!";
+        }
+
+        // Event listeners
+        but.addEventListener("click", wijzigStijl, false);
+    </script>
+
+</body>
+
+</html>

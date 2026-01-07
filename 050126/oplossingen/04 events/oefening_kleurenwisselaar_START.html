@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oefening kleurenwisselaar</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #kleurvak {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #000;
+        }
+    </style>
+    </head>
+
+    <body id="body">
+        <h1>Oefening kleurenwisselaar</h1>
+        <div id="kleurvak">Klik of hover</div>
+
+        <script>
+        // Element(en) selecteren
+        const divEl = document.getElementById("kleurvak")
+        const bodyEl = document.getElementById("body")
+        let aantalclicks = 0;
+
+         // Alle events: https://www.w3schools.com/jsref/dom_obj_event.asp         
+         // Event: Klik op de div → achtergrondkleur veranderen + tekst veranderen
+        divEl.addEventListener("click", ()=>{
+            aantalclicks +=1;
+            divEl.style.backgroundColor = willekeurigeKleur()
+            divEl.innerHTML = `je hebt al ${aantalclicks} keer geklikt`
+
+        })
+
+        // Event: Dubbelklik op de div → reset naar wit + tekst veranderen
+        divEl.addEventListener("dblclick", ()=>{
+            divEl.style.backgroundColor = "lightgray"
+            divEl.innerHTML ="Dubbelklik"
+        })
+
+        // Event: Muis over de div → tekst veranderen
+        divEl.addEventListener("mouseover", ()=>{
+            divEl.innerHTML = "Hovering"
+        })
+
+        // Event: Muis verlaat de div → tekst herstellen
+        divEl.addEventListener("mouseout", ()=>{
+            divEl.innerHTML = "Klik of hover"
+        })
+
+        // Event: Toets indrukken → achtergrondkleur van de pagina veranderen
+        bodyEl.addEventListener("keydown", ()=>{
+            bodyEl.style.backgroundColor = willekeurigeKleur();
+        })
+
+        // Functie om een willekeurige kleur te genereren
+        const willekeurigeKleur = () => {
+            const randomKleur = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            console.log(randomKleur);
+            return randomKleur;
+        };
+    </script>
+
+    </body>
+
+</html>

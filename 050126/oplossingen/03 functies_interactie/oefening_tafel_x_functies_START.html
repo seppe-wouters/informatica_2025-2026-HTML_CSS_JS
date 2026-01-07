@@ -23,24 +23,19 @@
         let input = 0
         const divEl = document.getElementById("result")
         // Functie om de tafel van een getal te berekenen en te tonen
-        function GeefTafel(number) {
+        function GeefTafel() {
+            input = document.getElementById("inputGetal").value
             divEl.innerHTML = ""
             for (let i = 1; i <= 10; i++) {
-                let elem = document.createElement("p")
-                elem.innerHTML = `${i}x${number}=${i*number}`
-                divEl.appendChild(elem)
+                divEl.innerHTML += `<p>${i}x${input}=${i*input}</p>`
             }
         }
 
-        document.getElementById("buttonTafel").addEventListener("click", ()=>{
-            input = document.getElementById("inputGetal").value
-            GeefTafel(input)
-        })
+        document.getElementById("buttonTafel").addEventListener("click", GeefTafel)
 
         document.getElementById("inputGetal").addEventListener("keydown", ()=>{
             if (event.code == "Enter"){
-                input = document.getElementById("inputGetal").value
-                GeefTafel(input)
+                GeefTafel()
             }
         })
     </script>

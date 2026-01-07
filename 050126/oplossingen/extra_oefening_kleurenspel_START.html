@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oefening EXTRA Kleurenspel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        #kleuren {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .kleurvak {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            border: 2px solid #333;
+            cursor: pointer;
+        }
+
+        #btnNieuwSpel {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #131414;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <h1>Kleurenspel</h1>
+    <p>Raad welke RGB-kleur hoort bij deze code: <strong><span id="kleurcode"></span></strong></p>
+
+    <div id="kleuren">
+        <div id="kleur1" class="kleurvak"></div>
+        <div id="kleur2" class="kleurvak"></div>
+        <div id="kleur3" class="kleurvak"></div>
+    </div>
+
+    <p id="bericht"></p>
+    <button id="btnNieuwSpel">Nieuw spel</button>
+
+    <script>
+        // Elementen declareren
+        const body = document.getElementById("body");
+        const spanEl = document.getElementById("kleurcode")
+        const kleurvak1 = document.getElementById("kleur1")
+        const kleurvak2 = document.getElementById("kleur2")
+        const kleurvak3 = document.getElementById("kleur3")
+        const bericht = document.getElementById("bericht")
+
+        // Start een nieuw spel
+        function startSpel() {
+            const juisteKleur = randomMakkelijkeKleur();
+            spanEl.innerHTML = juisteKleur;
+            let keuze = Math.floor(Math.random() * 3) + 1;
+            switch (keuze) {
+                case 1:
+                    kleurvak1.style.backgroundColor = juisteKleur
+                    kleurvak2.style.backgroundColor = randomMakkelijkeKleur()
+                    kleurvak3.style.backgroundColor = randomMakkelijkeKleur()
+                    break;
+                case 2:
+                    kleurvak1.style.backgroundColor = randomMakkelijkeKleur()
+                    kleurvak2.style.backgroundColor = juisteKleur
+                    kleurvak3.style.backgroundColor = randomMakkelijkeKleur()
+                case 3:
+                    kleurvak1.style.backgroundColor = randomMakkelijkeKleur()
+                    kleurvak2.style.backgroundColor = randomMakkelijkeKleur()
+                    kleurvak3.style.backgroundColor = juisteKleur
+            }
+            controle(juisteKleur)
+        }
+
+
+
+        // Controlefunctie
+        function controle(kleurJuist) {
+            kleurvak1.addEventListener("click", ()=>{
+                if (kleurvak1.style.backgroundColor == kleurJuist) {
+                    bericht.innerHTML = "gewonnen"
+                }else{
+                    bericht.innerHTML = "helaas"
+                }
+            })
+            kleurvak2.addEventListener("click", ()=>{
+                if (kleurvak2.style.backgroundColor == kleurJuist) {
+                    bericht.innerHTML = "gewonnen"
+                }else{
+                    bericht.innerHTML = "helaas"
+                }
+            })
+            kleurvak3.addEventListener("click", ()=>{
+                if (kleurvak3.style.backgroundColor == kleurJuist) {
+                    bericht.innerHTML = "gewonnen"
+                }else{
+                    bericht.innerHTML = "helaas"
+                }
+            })
+        }
+
+
+        // Functie om een makkelijke willekeurige kleur te maken
+        const randomMakkelijkeKleur = () => {
+            const waarden = ["00", "33", "66", "99", "CC", "FF"];
+            const rood = waarden[Math.floor(Math.random() * waarden.length)];
+            const groen = waarden[Math.floor(Math.random() * waarden.length)];
+            const blauw = waarden[Math.floor(Math.random() * waarden.length)];
+            // Testen in console
+            console.log("#" + rood + groen + blauw);
+            return "#" + rood + groen + blauw;
+        };
+
+        // Events
+        body.addEventListener("load", startSpel())
+        
+
+        // Start bij laden
+        
+
+    </script>
+
+</body>
+
+</html>

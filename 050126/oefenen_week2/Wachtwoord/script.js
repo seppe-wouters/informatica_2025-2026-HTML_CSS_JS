@@ -1,7 +1,7 @@
 const pwEl = document.querySelector("#pw")
 const res = document.querySelector("#res")
 
-pwEl.addEventListener("input", ()=> {
+pwEl.addEventListener("input", () => {
     if (pwEl.value.length < 6) {
         res.innerHTML = "te kort"
     }

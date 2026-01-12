@@ -1,0 +1,87 @@
+* {
+    background-color: black;
+}
+
+.mondriaan{
+    display: grid;
+    height: 703px;
+    width: 703px;
+    gap: 9px;
+    grid-template-rows: repeat(5, auto);
+}
+
+#Grid-top{
+    display: grid;
+    height: 80px;
+    grid-template-columns: 160px 258px 225px 33px;
+    gap: 9px;
+}
+
+#grid-midden-top {
+    display: grid;
+    height: 169px;
+    grid-template-columns: 71px 347px 225px 33px;
+    gap: 9px
+}
+
+#grid-midden-bottom {
+    display: grid;
+    grid-template-columns: 71px 347px 108px 108px 33px;
+    height: 89px;
+    gap: 9px;
+}
+
+#grid-midden-onder-bottom{
+    height: 80px;
+    display: grid;
+    grid-template-columns: 71px 169px 169px 225px 33px;
+    gap: 9px;
+}
+
+#grid-3rdelaatste{
+    height: 89px;
+    display: grid;
+    grid-template-columns: 71px 169px 169px 225px 33px;
+    gap: 9px
+}
+
+#wit-links{
+    height: 80px;
+    width: 71px;
+}
+
+#grid-voorlaatste{
+    height: 47px;
+    display: grid;
+    grid-template-columns: 71px 169px 169px 225px 33px;
+    gap: 9px;
+}
+
+#grid-laatste{
+    height: 24px;
+    display: grid;
+    grid-template-columns: 71px 580px 33px;
+    gap: 9px;
+}
+
+
+
+.wit {
+    background-color: white;
+}
+
+.geel{
+    background-color: yellow;
+}
+
+.rood{
+    background-color: red;
+}
+
+.blauw{
+    background-color: blue;
+}
+
+.zwart{
+    background-color: rgb(36, 36, 36);
+}

@@ -24,8 +24,8 @@ document.querySelector("#reset").addEventListener("click", () => {
 function updateView() {
     document.querySelector("#totaal").innerHTML = bedrag
 
-    if (bedrag > 10) {
-        document.querySelector("#GroterDan").innerHTML = "het bedrag is groter dan 10"
+    if (bedrag > 25) {
+        document.querySelector("#GroterDan").innerHTML = "het bedrag is groter dan 25"
     } else {
         document.querySelector("#GroterDan").innerHTML = ""
     }

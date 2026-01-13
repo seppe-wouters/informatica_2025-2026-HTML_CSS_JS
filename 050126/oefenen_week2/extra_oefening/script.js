@@ -16,6 +16,8 @@ btnNieuweDag.addEventListener("click", () => {
     totaal = 0
     inputEl.value = 0
     updateView()
+    btnNieuweDag.style.transform = "scale(100)"
+    btnNieuweDag.style.transition = "transform 20s"
 })
 
 function updateView() {

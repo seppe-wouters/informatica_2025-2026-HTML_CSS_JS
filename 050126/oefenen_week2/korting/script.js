@@ -12,6 +12,9 @@ function berekenTotPrijs() {
         case "leerkracht":
             totaalbedrag = prijs * 1.10
             break
+        case "none":
+            totaalbedrag = prijs
+            break;
     }
 
     res.innerHTML = totaalbedrag.toFixed(2)

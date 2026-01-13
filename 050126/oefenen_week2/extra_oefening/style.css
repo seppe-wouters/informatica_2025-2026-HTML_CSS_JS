@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.main {
+    background-color: grey;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main button,input,p {
+    margin: 5px;
+}
+
+.main button{
+    border-radius: 8px;
+}
+
+.main button:hover{
+    background-color: darkgrey;
+    transform: scale(1.1) ;
+    transition: transform 0.3s;
+}

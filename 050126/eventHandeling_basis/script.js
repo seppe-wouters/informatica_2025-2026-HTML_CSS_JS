@@ -40,7 +40,7 @@ inputEvenOfOneven.addEventListener("keyup", () => {
 //#endregion
 //#region oef 7
 document.querySelector("#inputIsGetal").addEventListener("change", () => {
-    if (isNaN(document.querySelector("#inputIsGetal").value) == true) {
+    if (isNaN(document.querySelector("#inputIsGetal").value) != true) {
         document.querySelector("#resIsGetal").innerHTML = "Het is een getal"
     } else {
         document.querySelector("#resIsGetal").innerHTML = "Het is geen getal"

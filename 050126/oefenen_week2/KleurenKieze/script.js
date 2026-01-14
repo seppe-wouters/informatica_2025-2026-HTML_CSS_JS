@@ -11,6 +11,6 @@ function changeColor() {
     }
 }
 
-getal1.addEventListener("change", changeColor)
-getal2.addEventListener("change", changeColor)
-getal3.addEventListener("change", changeColor)
+getal1.addEventListener("input", changeColor)
+getal2.addEventListener("input", changeColor)
+getal3.addEventListener("input", changeColor)

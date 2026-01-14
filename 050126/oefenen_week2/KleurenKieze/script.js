@@ -17,14 +17,14 @@ function changeColor() {
 
 getal1.addEventListener("input", ()=>{
     stelGrenzenIn(getal1)
+    changeColor()
 })
 getal2.addEventListener("input", ()=>{
     stelGrenzenIn(getal2)
+    changeColor()
 })
 getal3.addEventListener("input", ()=>{
     stelGrenzenIn(getal3)
+    changeColor()
 })
 
-getal1.addEventListener("input", changeColor)
-getal2.addEventListener("input", changeColor)
-getal3.addEventListener("input", changeColor)

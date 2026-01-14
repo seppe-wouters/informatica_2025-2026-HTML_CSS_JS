@@ -72,6 +72,6 @@ document.querySelector("#btn2Oef9").addEventListener("click", () => {
 //#endregion
 //#region oef 10
 document.querySelector("#btnOef10").addEventListener("click", () => {
-    document.querySelector("#res").innerHTML = document.querySelector("#inputGetal1").value + document.querySelector("#inputGetal2").value
+    document.querySelector("#res").innerHTML = parseFloat(document.querySelector("#inputGetal1").value) + parseFloat(document.querySelector("#inputGetal2").value)
 })
 //#endregion

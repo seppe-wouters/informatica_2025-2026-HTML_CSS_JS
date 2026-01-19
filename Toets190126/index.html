@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinema Ticket Calculator</title>
+    </head>
+    <body>
+        <!-- HTML structuur -->
+        <h1>Cinema Ticket Calculator</h1>
+        <label for>Basis Tarief (€): </label>
+        <input type="number" id="inputPrijs" value="12">
+        <label for>Welke korting: </label>
+
+        <!-- Select voor het type korting -->
+        <select name="korting" id="selectKorting">
+            <option value="NONE">Geen korting</option>
+            <option value="STUDENT">Student</option>
+            <option value="SENIOR">Ouder dan 60</option>
+        </select>
+
+        <!-- Select voor de dag van de week -->
+        <select name="DagVanDeWeek" id="selectDag">
+            <option value="MA">Maandag</option>
+            <option value="DI">Dinsdag</option>
+            <option value="WO">Woensdag</option>
+            <option value="DO">Donderdag</option>
+            <option value="VR">Vrijdag</option>
+            <option value="ZA">Zaterdag</option>
+            <option value="ZO">Zondag</option>
+        </select>
+
+        <!-- Button voor te berekenen -->
+        <button id="btnBereken">Bereken</button>
+
+        <!-- Eindtotaal tonen op de website -->
+        <p>Het eindtotaal is: €<strong id="totPrijs">0.00</strong></p>
+
+        <script src="script.js"></script>
+    </body>
+</html>

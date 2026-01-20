@@ -10,15 +10,7 @@ const basistarief = 12
 
 //functie om de prijs te berekenen
 function calculatePrice() {
-    //ophalen
-    let totPrijs = 0;
-
-    //als input leeg is basis tarief gebruiken
-    if (isNaN(inputPrijs.value) || inputPrijs.value == 0) {
-        totPrijs = basistarief;
-    } else {
-        totPrijs = inputPrijs.value;
-    }
+    let totPrijs = 12
 
     //kortingstype berekenen
     switch (selectKorting.value) {
@@ -35,7 +27,7 @@ function calculatePrice() {
     }
 
     //als het dinsdag is extra korting
-    if (selectDag.value == "DI") {
+    if (selectDag.value == "DI") {  
         totPrijs *= 0.90;
     }
 

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Manager</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 class="tekst">Event & Deal Selector</h1>
+        <section class="Main">
+            <div id="links">
+                <h2 class="tekst">Maak je keuze</h1>
+                <p class="tekst">Kies je activiteit:</p>
+                <div id="imgDiv">
+                    <img id="imgCinema" src="./pics/cinema.png" alt="Cinema">
+                    <img id="imgClubbing" src="./pics/Clubbing.png"
+                        alt="Clubbing">
+                    <img id="imgEscapeRoom" src="./pics/EscapeRoom.png"
+                        alt="EscapeRoom">
+                    <img id="imgFestival" src="./pics/Festival.png"
+                        alt="Festival">
+                </div>
+
+                <p class="tekst">welke dag:</p>
+                <select class="opmaakSelect" name="DagVanDeWeek" id="selectDag">
+                    <option value="Maandag">Maandag</option>
+                    <option value="Dinsdag">Dinsdag</option>
+                    <option value="Woensdag">Woensdag</option>
+                    <option value="Donderdag">Donderdag</option>
+                    <option value="Vrijdag">Vrijdag</option>
+                    <option value="Zaterdag">Zaterdag</option>
+                    <option value="Zondag">Zondag</option>
+                </select>
+
+                <p class="tekst">Kies je deal:</p>
+                <select class="opmaakSelect" name="Deal" id="selectDeal">
+                    <option value="earlyBird">Early Bird</option>
+                    <option value="None">Geen</option>
+                </select>
+
+                <div id="btn">
+                    <button id="BerekenPrijs">Bereken</button>
+                </div>
+            </div>
+
+            <div id="rechts">
+                <h2 class="tekst">Jouw keuze</h1>
+                <img id="gekozenAfbeelding" src="./pics/cinema.png">
+                <div id="lijst1">
+                    <ul>
+                        <li class="tekst"><p id="activiteit" class="tekst">Activtiteit:</p></li>
+                        <li class="tekst"><p id="dag" class="tekst">Dag:</p></li>
+                        <li class="tekst"><p id="deal" class="tekst">Deal:</p></li>
+                    </ul>
+                </div>
+
+                <div id="lijst2">
+                    <ul>
+                        <li class="tekst"><p id="basisPrijs" class="tekst">Basisprijs:</p></li>
+                        <li class="tekst"><p id="toeslag" class="tekst">Toeslag:</p></li>
+                        <li class="tekst"><p id="Korting" class="tekst">Korting:</p></li>
+                    </ul>
+                </div>
+                
+                <p id="TotPrijsStyle" class="tekst">TotaalPrijs: <strong id="TotPrijs" class="tekst"></strong></p>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>

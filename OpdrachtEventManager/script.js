@@ -50,7 +50,7 @@ dagSelect.addEventListener("input", () => {
     dagEl.innerHTML = `Dag: ${dagSelect.value}`
     if (dagSelect.value == "Zaterdag" || dagSelect.value == "Zondag") {
         toeslag = 5
-        toeslagEl.innerHTML = "Toeslag: +€5.00"
+        toeslagEl.innerHTML = "Toeslag: +€5.00 (Weekend Toeslag)"
     } else {
         toeslag = 0
         toeslagEl.innerHTML = "Toeslag: €0.00"
@@ -83,8 +83,9 @@ berekenEl.addEventListener("click", () => {
         prijs = basisprijs + toeslag
         prijs.toFixed(2)
     }
-
+    
     totPrijsEl.innerHTML = `€${prijs}`
+
+    document.querySelector("#btn").style.transform = "rotate(5turn)"
+    document.querySelector("#btn").style.transition = "transform 5s"
 })
-
-

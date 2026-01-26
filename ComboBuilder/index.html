@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maccie</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="pics/burger.png"/>
+</head>
+<body>
+    <header>
+        <h1 class="tekst">Food & Drink Combo Builder</h1>
+    </header>
+
+    <section class="main">
+        <div id="links">
+            <h2 class="subtitle">Stel je combo samen</h2>
+            <p>kies je hoofdgerecht: </p>
+            <div class="divKeuze">
+                <img src="./pics/burger.png" alt="" class="PicsLinks">
+                <select name="hoofdgerecht" id="hoofdgerecht">
+                    <option value="Veggie">Veggie</option>
+                    <option value="Normal">Normal</option>
+                </select>
+            </div>
+
+            <p>kies je Drank: </p>
+            <div class="divKeuze">
+                <img src="./pics/frisdrank.png" alt="" class="PicsLinks">
+                <select name="Drank" id="Drank">
+                    <option value="Cola">Cola</option>
+                    <option value="Bier">Bier</option>
+                    <option value="Fanta">Fanta</option>
+                    <option value="Sprite">Sprite</option>
+                </select>
+            </div>
+
+            <p>kies je hoofdgerecht: </p>
+            <div class="divKeuze">
+                <img src="./pics/tijd.png" alt="" class="PicsLinks">
+                <select name="Tijd" id="Tijd">
+                    <option value="Ochtend">Ochtend</option>
+                    <option value="Middag">Middag</option>
+                    <option value="Avond">Avond</option>
+                </select>
+            </div>
+
+            <button id="Bereken">Bereken Prijs</button>
+        </div>
+        <div id="rechts">
+            <div id="title">
+                <h2 class="text">Jouw combo</h2>
+            </div>
+            <div>
+                <p id="hoofdgerechtRechts">Hoofdgerecht: </p>    
+                <p id="drankRechts">Drank: </p>
+                <p id="MomentRechts">Moment: </p>
+                <p class="subtitleRechts"></p>
+                <p id="basisprijs">Basisprijs: </p>
+                <p id="toeslag">Toeslag: </p>
+                <p id="PrijsDrank">Drank Prijs: </p>
+                <p class="subtitleRechts"></p>
+                <p>Te betalen: <strong id="teBetalen"></strong></p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

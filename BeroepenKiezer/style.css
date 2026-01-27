@@ -8,7 +8,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    background: linear-gradient(0deg, #0f2027, #203A43, #2C5364);;
+    background: linear-gradient(0deg, #0f2027, #203A43, #2C5364);
     border-bottom: balck solid 1px;
 }
 
@@ -38,7 +38,7 @@ header {
     color: white;
 }
 
-#left p{
+#left p {
     margin-bottom: 0;
     color: black;
 }
@@ -70,8 +70,7 @@ header {
     border-radius: 20px;
 }
 
-
-#btns{
+#btns {
     display: flex;
     flex-direction: column;
 }

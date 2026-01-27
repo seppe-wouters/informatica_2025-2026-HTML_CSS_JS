@@ -55,18 +55,7 @@ function getBeroep() {
     }
 }
 
-btnToonBeroep.addEventListener("click", () => {
-    if (!btnToonBeroep.classList.contains("clicked")) {
-        div1 = document.createElement("div")
-        NaamBeroep = document.createElement("h3")
-        UitlegBeroep = document.createElement("p")
-        div1.append(NaamBeroep)
-        div1.append(UitlegBeroep)
-        div1.id = "right"
-        document.querySelector(".main").appendChild(div1)
-        btnToonBeroep.classList.add("clicked")
-    }
-
+function toonResultaat() {
     getChoices()
     let beroep = getBeroep()
     switch (beroep) {
@@ -111,6 +100,21 @@ btnToonBeroep.addEventListener("click", () => {
             UitlegBeroep.innerHTML = uitlegEOM
             break;
     }
+}
+
+btnToonBeroep.addEventListener("click", () => {
+    if (!btnToonBeroep.classList.contains("clicked")) {
+        div1 = document.createElement("div")
+        NaamBeroep = document.createElement("h3")
+        UitlegBeroep = document.createElement("p")
+        div1.append(NaamBeroep)
+        div1.append(UitlegBeroep)
+        div1.id = "right"
+        document.querySelector(".main").appendChild(div1)
+        btnToonBeroep.classList.add("clicked")
+    }
+
+    toonResultaat()
 })
 
 document.querySelector("#Reset").addEventListener("click", () => {

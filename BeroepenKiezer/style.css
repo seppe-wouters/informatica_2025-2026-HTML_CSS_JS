@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0 auto;
+    font-size: larger;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(0deg, #0f2027, #203A43, #2C5364);;
+    border-bottom: balck solid 1px;
+}
+
+
+.main {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(#0f2027, #203A43, #2C5364);
+}
+
+#left {
+    align-self: center;
+    margin-bottom: 40%;
+    justify-self: center;
+    background: linear-gradient(167deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5));
+    height: fit-content;
+    padding: 5%;
+    border-radius: 20px;
+}
+
+#left select {
+    padding: 5px;
+    background-color: #3c7791;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+}
+
+#left p{
+    margin-bottom: 0;
+    color: black;
+}
+
+#left button {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: transparent;
+    background-color: grey;
+    color: white;
+    padding: 5px;
+}
+
+#left button:hover {
+    background-color: rgb(100, 99, 99);
+    transition: background-color 0.2s ease-in-out;
+}
+
+#right {
+    color: black;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 40%;
+    margin-right: 20%;
+    justify-self: center;
+    background: linear-gradient(167deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5));
+    height: fit-content;
+    padding: 5%;
+    border-radius: 20px;
+}
+
+
+#btns{
+    display: flex;
+    flex-direction: column;
+}

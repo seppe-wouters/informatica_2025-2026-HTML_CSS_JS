@@ -1,0 +1,38 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.vak {
+    background-color: lightgrey;
+    height: 50vh;
+    box-shadow: 2px 1px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.a {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.afbeelding {
+    height: 50%;
+    background-image: url("https://picsum.photos/1200");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h4, p {
+    display: block;
+    width: 75%;
+    text-align: left;
+    margin-left: 20px;
+}
+
+button {
+    width: 75%;
+    height: 60px;
+    align-self: center;
+}

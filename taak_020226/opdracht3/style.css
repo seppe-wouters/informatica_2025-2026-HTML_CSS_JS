@@ -1,0 +1,25 @@
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.vak {
+    height: 100px;
+}
+
+.a {
+    background: red;
+}
+
+.b {
+    background: blue;
+}
+
+.c {
+    background: green;
+}
+
+.d {
+    background: yellow;
+}

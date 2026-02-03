@@ -1,0 +1,68 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    background-color: rgb(255, 241, 224);
+    height: 80vh;
+}
+
+.vak {
+    border-radius: 20px;
+    box-shadow: 1px 2px rgba(128, 128, 128, 0.75);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 244, 232);
+}
+
+.vak button {
+    width: fit-content;
+    padding: 5px;
+    align-self: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: transparent;
+    box-shadow: 1px 2px rgba(128, 128, 128, 0.75);
+    background-color: bisque;
+}
+
+.vak button:hover {
+    background-color: rgb(211, 188, 160);
+    transition: background-color 0.3s;
+}
+
+.vak h2,h4 {
+    margin: 5px;
+}
+
+.a {
+    grid-area: 1/1/2/4;
+}
+
+.b {
+    grid-area: 2 / 1 / 4 / 1;
+    height: 100%;
+}
+
+.afbeelding {
+    padding: 5%;
+    height: 40%;
+    min-height: 100px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: url("https://picsum.photos/400/100");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#picB {
+    height: 40%;
+    background-image: url("https://picsum.photos/400");
+}
+
+#picA {
+    background-image: url("https://picsum.photos/400/1200");
+}

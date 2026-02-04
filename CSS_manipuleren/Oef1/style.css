@@ -1,0 +1,17 @@
+.buttonToggled {
+    background-color: green;
+    font-weight: bold;
+}
+
+.hideP {
+    display: none;
+}
+
+div {
+    height: 100px;
+    width: 600px;
+    border: black solid 2px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 20px;
+}

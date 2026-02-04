@@ -1,0 +1,14 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+
+div {
+    background-color: lightgrey;
+    width: 100px;
+    height: 200px;
+}
+
+.selected {
+    background-color: black;
+}

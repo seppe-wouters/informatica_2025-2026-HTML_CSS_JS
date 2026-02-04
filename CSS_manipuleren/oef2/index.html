@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .goedeInvoer {
+            color: green;
+        }
+
+        .fouteInvoer {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="input">
+    <p id="foutMelding"></p>
+
+    <script>
+        const input = document.querySelector("#input")
+        const p = document.querySelector("#foutMelding")
+
+        input.addEventListener("input", ()=>{
+            let strInput = input.value
+            if (strInput.length < 3) {
+                p.innerHTML = "te kort"
+                p.classList.add("fouteInvoer")
+                p.classList.remove("goedeInvoer")
+            } else {
+                p.innerHTML = "het is goed"
+                p.classList.add("goedeInvoer")
+                p.classList.remove("fouteInvoer")
+            }
+
+        })
+    </script>
+</body>
+</html>

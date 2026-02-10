@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "naam": "Laptop",
+    "prijs": 999,
+    "voorraad": 12
+  },
+  {
+    "id": 2,
+    "naam": "Muis",
+    "prijs": 25,
+    "voorraad": 58
+  },
+  {
+    "id": 3,
+    "naam": "Toetsenbord",
+    "prijs": 49,
+    "voorraad": 34
+  },
+  {
+    "id": 4,
+    "naam": "Monitor",
+    "prijs": 199,
+    "voorraad": 7
+  }
+]
+

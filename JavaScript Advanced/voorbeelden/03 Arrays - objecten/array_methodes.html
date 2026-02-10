@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array functies</title>
+    <link rel="shortcut icon" href="#">
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 15px;
+        }
+
+        .result {
+            padding: 5px 10px;
+            background: #f4f4f4;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JavaScript Arrays functies – voorbeelden</h1>
+
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById("output");
+
+        function show(title, value) {
+            const div = document.createElement("div");
+            div.className = "result";
+            div.innerHTML = `<h2>${title}</h2><p>${value}</p>`;
+            output.appendChild(div);
+        }
+
+        // Startarray
+        let namen = ["Lisa", "Tom", "Bram", "Eva", "Sofie"];
+        show("Start array", namen.join(", "));
+
+        // 1. Sorteren
+        let gesorteerd = [...namen].sort(); // kopie zodat originele blijft bestaan
+        show("Sorteren (sort)", gesorteerd.join(", "));
+
+        // 2. Volgorde omdraaien
+        let omgekeerd = [...namen].reverse();
+        show("Volgorde omdraaien (reverse)", omgekeerd.join(", "));
+
+        // 3. Samenvoegen (join)
+        let stringNamen = namen.join(" | ");
+        show("Samenvoegen (join)", stringNamen);
+
+        // 4. Splitsen (split)
+        let gesplitst = stringNamen.split(" | ");
+        show("Splitsen (split)", gesplitst.join(", "));
+
+        // 5. Elementen toevoegen (push)
+        let pushTest = [...namen];
+        pushTest.push("Hanne");
+        show("Element toevoegen achteraan (push)", pushTest.join(", "));
+
+        // 6. Element verwijderen (pop)
+        let popTest = [...pushTest];
+        const verwijderd = popTest.pop();
+        show("Element verwijderen achteraan (pop)", `${popTest.join(", ")} (verwijderd: ${verwijderd})`);
+
+    </script>
+
+</body>
+
+</html>
+
+
+</body>
+
+</html>

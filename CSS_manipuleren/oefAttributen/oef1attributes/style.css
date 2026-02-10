@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    width: 50vw;
+    border-radius: 50%;
+}
+
+button{
+    width: 50vw;
+    margin-top: 20px;
+}

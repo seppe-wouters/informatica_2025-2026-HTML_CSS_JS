@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lijst met array</title>
+    <link rel="shortcut icon" href="#">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+
+        <h1>Dynamische lijst (met array)</h1>
+
+        <div class="m-3">
+            <button id="btnAdd" class="btn btn-primary">Voeg item toe</button>
+            <button id="btnRemove" class="btn btn-danger">Verwijder laatste item</button>
+        </div>
+
+        <div id="lijst"></div>
+
+        <script>
+            const lijstDiv = document.querySelector("#lijst");
+            const btnAdd = document.querySelector("#btnAdd");
+            const btnRemove = document.querySelector("#btnRemove");
+
+            // UL aanmaken
+            const ul = document.createElement("ul");
+            lijstDiv.appendChild(ul);
+
+            let items = []; // array houdt de items bij
+            let teller = 1; // teller voor itemnaam
+
+            // Lijst renderen (scheidt data van weergave)
+            const renderLijst = () => {
+                ul.innerHTML = ""; // eerst UL leegmaken
+                items.forEach(item => {
+                    const li = document.createElement("li");
+                    li.textContent = item;
+                    ul.appendChild(li);
+                });
+            };
+
+            // Item toevoegen
+            btnAdd.addEventListener("click", function () {
+                const nieuwItem = "Item " + teller;
+                items.push(nieuwItem);
+                teller++;
+                renderLijst();
+            });
+
+            // Laatste item verwijderen
+            btnRemove.addEventListener("click", function () {
+                if (items.length > 0) {
+                    items.pop();
+                    teller--;
+                    renderLijst();
+                }
+            });
+        </script>
+
+</body>
+
+</html>

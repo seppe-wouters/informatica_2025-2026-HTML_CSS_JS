@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorbeeld filter array</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <p>Leeftijden 18 jaar en ouder:</p>
+    <div id="resultaat"></div>
+
+    <script>
+        const res = document.getElementById("resultaat");
+        let leeftijden = [32, 33, 16, 40, 7, 56, 12, 18, 25, 22, 55, 31];
+
+        // Filteren
+        res.innerHTML = leeftijden.filter(el => el >= 18).join(', ');
+
+        // Of kopieren naar nieuwe array
+        let leeftijden18 = leeftijden.filter(el => el >= 18);
+
+        leeftijden18.forEach(element => {
+            res.innerHTML += '<div>' + element + '</div>';
+        });
+
+
+    </script>
+</body>
+
+</html>

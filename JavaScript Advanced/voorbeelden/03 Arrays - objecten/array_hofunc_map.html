@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorbeeld map array</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="resultaat"></div>
+
+    <script>
+        const res = document.getElementById("resultaat");
+        let numbers = [65, 44, 12, 4];
+
+        // Oude manier via een functie        
+        function mijnFunctie(num) {
+            return num * 10;
+        }
+
+        res.innerHTML += '<div>' + numbers.map(mijnFunctie) + '</div>';
+
+        // Korter via lambda expression
+        res.innerHTML += '<div>' + numbers.map(num => num * 10) + '</div>';
+
+
+        const auto = {
+            merk: "Toyota",
+            model: "Corolla",
+            jaar: 2022,
+            starten: function () { console.log("Auto gestart"); }
+        };
+
+
+    </script>
+</body>
+
+</html>

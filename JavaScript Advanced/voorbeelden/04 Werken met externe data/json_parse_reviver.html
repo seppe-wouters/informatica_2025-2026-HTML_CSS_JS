@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON intro</title>
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <h1>JSON parse() met gebruik van reviver</h1>
+    <div id="divResult"></div>
+
+    <script>
+        const el = document.querySelector("#divResult")
+
+        // We ontvangen bijvoorbeeld een JSON string van de server....
+        const autoJSON =
+            '{"merk":"Toyota","model":"Corolla","jaar":2022,"kleuren":["rood","blauw","wit"],"motor":{"type":"benzine","vermogen":132,"cilinders":4},"inschrijvingsdatum":"2022-01-01"}';
+
+        // Via de parse methode maken we er een JS object van
+        // We gebruiken de reviver optie om de inschrijvingsdatum om te zetten naar een Date object
+        const auto = JSON.parse(autoJSON, (key, value) => {
+            if (key == "inschrijvingsdatum") {
+                return new Date(value)
+            } else {
+                return value
+            }
+        })
+
+        // Test in de console
+        console.log(auto);
+
+        // Oplijsten van kleuren
+        auto.kleuren.forEach(kleur => { el.innerHTML += "<div>" + kleur + "</div>"; })
+
+        // Tonen van de inschrijvingsdatum
+        el.innerHTML +=
+            "<div>Inschrijvingsdatum: " +
+            new Intl.DateTimeFormat("nl-BE", {weekday: "long",day: "numeric",
+                month: "long",year: "numeric"} + "</div>").format(auto.inschrijvingsdatum);
+    </script>
+</body>
+
+</html>

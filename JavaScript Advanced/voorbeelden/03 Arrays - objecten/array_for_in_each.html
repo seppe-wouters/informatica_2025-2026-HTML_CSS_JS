@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+
+    <script>
+        let countries = ['Brazil', 'Mexico', , 'Belgium', 'Germany', 'Sweden'];
+
+        // FOR...IN
+        console.log('FOR...IN \n-------------------- \n');
+        for (let index in countries) {
+            console.log(countries[index]);
+        }
+
+        // FOREACH
+        console.log('FOREACH \n-------------------- \n');
+
+        countries.forEach((val, key) => {
+            console.log(val);
+        });
+
+        // FOREACH met val en key
+        console.log('FOREACH met key\n-------------------- \n');
+
+        countries.forEach((val, key) => {
+            console.log(key, val);
+        });
+
+        // FOREACH met 3 parameters
+        console.log('FOREACH met 3 parameters\n-------------------- \n');
+
+        countries.forEach((land, index, array) => {
+            array[index] = land.toUpperCase();
+        });
+
+        console.log(countries);
+    </script>
+
+</body>
+
+</html>

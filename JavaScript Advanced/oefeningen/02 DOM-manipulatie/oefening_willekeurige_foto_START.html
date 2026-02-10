@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Oefening - Willekeurige fotogalerij</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Willekeurige fotogalerij</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <button class="btn btn-primary mb-4 d-block" id="btnRandom">Toon willekeurige foto</button>
+                <img class="img-fluid" id="foto" src="../images/spanje/spain-01.jpg" alt="Random foto">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Array met afbeeldingsbestanden
+        const fotos = ["spain-01.jpg", "spain-02.jpg", "spain-03.jpg", "spain-04.jpg", "spain-05.jpg", "spain-06.jpg", "spain-07.jpg", "spain-08.jpg", "spain-09.jpg", "spain-10.jpg", "spain-11.jpg", "spain-12.jpg", "spain-13.jpg", "spain-14.jpg", "spain-15.jpg", "spain-16.jpg"];
+
+
+
+
+
+
+
+
+
+
+
+
+        // Extra functie voor random waarden te genereren tussen min en max waarden
+        randomIntFromInterval = (min, max) => { // min and max included 
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+    </script>
+
+</body>
+
+</html>

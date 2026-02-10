@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inner HTML vs Inner Text vs Text Content</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div id="demo">
+        <p>Hallo <strong>wereld</strong>!</p>
+        <span style="display:none">Verborgen tekst</span>
+    </div>
+
+    <button onclick="showDifferences()">Toon verschillen</button>
+
+    <pre id="output"></pre>
+
+
+    <script>
+        function showDifferences() {
+            const demo = document.getElementById("demo");
+
+            const html = demo.innerHTML;
+            const text = demo.innerText;
+            const content = demo.textContent;
+
+            document.getElementById("output").innerText =
+                "innerHTML:\n" + html +
+                "\n\ninnerText:\n" + text +
+                "\n\ntextContent:\n" + content;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-it Prikbord</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Indie Flower', cursive;
+      background-color: #f0f0f0;
+    }
+
+    #board {
+      width: 100vw;
+      height: 100vh;
+      margin: auto;
+      background-color: #b7f0d5;
+      border: 5px solid #ccc;
+      position: relative;
+    }
+
+    .note {
+      width: 150px;
+      height: 150px;
+      padding: 10px;
+      background-color: #fff89a;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      font-size: 18px;
+      position: absolute;
+      z-index: 2;
+    }
+
+    .highlight {
+      background-color: #ffeb3b;
+      /* Gele achtergrondkleur */
+      transition: background-color 0.3s ease;
+      /* Animatie voor achtergrondkleur */
+    }
+
+    #knop {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="board">
+    <div class="note">Voorbeeld notitie</div>
+
+    <div id="knop">Note toevoegen</div>
+  </div>
+
+  <script>
+    // Hier kom je code
+
+
+
+
+
+
+
+
+
+
+    
+    // Extra functie voor random waarden te genereren tussen min en max waarden
+    randomIntFromInterval = (min, max) => { // min and max included 
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

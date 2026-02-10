@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Oefening Tekststijlen dynamisch aanpassen</title>
+  <link rel="shortcut icon" href="#">
+
+  <style>
+    /* Stijlen voor container */
+    .container {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+    }
+
+    /* Standaard stijlen */
+    strong {
+      font-weight: normal;
+    }
+
+    /* Extra stijlen voor gekleurde woorden */
+    .highlight {
+      color: black;
+    }
+
+    /* Klasse die toegevoegd wordt via JavaScript */
+    .bold {
+      font-weight: bold;
+    }
+
+    .orange {
+      color: rgb(215, 102, 26);
+      font-weight: 700;
+    }
+
+    /* ### Uitbreiding ### */
+    .italic {
+      font-style: italic;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+
+    .bg-yellow {
+      background-color: rgb(255, 244, 180);
+    }
+
+    /* ### Uitbreiding ### */
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="row">
+      <div class="col">
+
+        <h1 class="m-3">Tekststijlen dynamisch aanpassen</h1>
+        <p class="lead">Dit is een <span class="schuin">heel</span> <strong>belangrijke</strong> zin met enkele <span
+            class="highlight">woorden</span>
+          die extra aandacht verdienen.</p>
+        <p>Ook in deze zin staat een <strong>essentieel</strong> woord en een <span class="highlight">gekleurde</span>
+          term.</p>
+        <p>Hier staat een <span class="underline-target">onderlijnd woord</span> dat kan worden aangepast.</p>
+
+
+        <div class="mb-3">
+          <button class="btn btn-primary" id="toggleBold">Vet gedrukte woorden aan/uit</button>
+          <button class="btn btn-primary" id="toggleHighlight">Gekleurde woorden aan/uit</button>
+        </div>
+
+        <!-- ### Uitbreiding ### -->
+        <div class="mb-3">
+          <button class="btn btn-secondary" id="toggleItalic">Cursief aan/uit</button>
+          <button class="btn btn-secondary" id="toggleUnderline">Onderlijnen aan/uit</button>
+          <button class="btn btn-dark" id="toggleBackground">Achtergrond paragraaf</button>
+          <button class="btn btn-danger" id="resetStyles">Reset alle stijlen</button>
+        </div>
+        <!-- ### Uitbreiding ### -->
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Hier kom je code
+
+
+
+
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

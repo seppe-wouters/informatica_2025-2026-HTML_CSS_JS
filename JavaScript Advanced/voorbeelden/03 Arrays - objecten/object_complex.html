@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten: object complex</title>
+    <link rel="shortcut icon" href="#">
+
+</head>
+
+<body>
+    <h1>Objecten complex</h1>
+    <div id="divResult"></div>
+    <script>
+        const res = document.querySelector("#divResult");
+
+        // Voorbeeld van complex object.
+        const auto = {
+            merk: "Toyota",
+            model: "Corolla",
+            jaar: 2022,
+            kleuren: ["rood", "blauw", "wit"],   // array van beschikbare kleuren
+            motor: {                             // genest object
+                type: "benzine",
+                vermogen: 132,
+                cilinders: 4
+            },
+            eigenaar: {
+                naam: "Jan Jansen",
+                leeftijd: 35,
+                rijbewijzen: ["B", "BE"]         // array van rijbewijzen
+            },
+            start: function () {                 // methode
+                console.log(`${this.merk} ${this.model} gestart`);
+            },
+            info: function () {                  // methode
+                console.log(`Auto: ${this.merk} ${this.model}, ${this.jaar}`);
+            }
+        };
+
+
+        // Volledig object tonen.
+        console.log(auto);
+
+        // Individuele properties tonen.
+        console.log(auto.merk);
+        console.log(auto.model);
+        console.log(auto.jaar);
+        console.log(auto.kleuren);
+        console.log(auto.motor);
+        console.log(auto.eigenaar);
+        
+        /* // Toon de eigenschappen van de eigenaar.
+        console.log(auto.eigenaar.naam);
+        console.log(auto.eigenaar.leeftijd);
+        console.log(auto.eigenaar.rijbewijzen); */
+
+        // Toon de eigenschappen van de eigenaar via een lus
+        for (let eigenschap in auto.eigenaar) {
+            console.log(auto.eigenaar[eigenschap]);
+        }
+
+        // Aanpassen van properties.
+        auto.merk = "Honda";
+        auto.model = "Civic";
+        console.log(auto.merk);
+        console.log(auto.model);
+
+        auto.start();
+        auto.info();
+    </script>
+
+</body>
+
+</html>
+
+</html>

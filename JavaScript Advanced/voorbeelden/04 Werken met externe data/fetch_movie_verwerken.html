@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorbeeld Fetch data verwerking</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container p-4">
+        <h1>Eenvoudig Fetch-voorbeeld The Movie Database (TMDB)</h1>
+
+        <label for="zoekterm">Geef een zoekterm in:</label>
+        <input type="text" id="zoekterm" class="form-control my-3" placeholder="Zoekterm" value="Star Wars">
+
+        <button id="buttonRequest" class="btn btn-primary my-3">
+            Toon films via fetch
+        </button>
+
+        <div id="divResult" class="row g-3"></div>
+    </div>
+
+    <script>
+        const divRes = document.querySelector("#divResult");
+        const knop = document.querySelector("#buttonRequest");
+        const search = document.querySelector("#zoekterm");
+
+        const getData = () => {
+            // Wijzig de XXX in je eigen API key
+            const api_key = "1e8d1070586a9fcf885999b3566e2e3b";
+            const api_url = "https://api.themoviedb.org/3/search/movie?";
+            const options = { method: 'GET', headers: { accept: 'application/json' } };
+
+            // Fetch met de zoekterm uit het inputveld
+            fetch(`${api_url}api_key=${api_key}&language=nl-BE&query=${search.value}&include_adult=false`, options)
+                .then(response => response.json()) // JSON → JS object
+                .then(data => showData(data))
+                .catch(err => console.log("Error: ", err));
+        };
+
+        // Films tonen in cards
+        const showData = (data) => {
+            // JSON → JS object
+            console.log(data);
+
+            divRes.innerHTML = ""; // leegmaken
+
+            const movies = data.results;
+
+            if (!movies || movies.length === 0) {
+                divRes.innerHTML = `<div class="alert alert-danger ms-3" role="alert">Geen resultaten gevonden...</div>`;
+                return;
+            }
+
+            movies.forEach(movie => {
+                // Iedere film heeft een titel, een jaar en een poster
+                const titel = movie.title;
+                const jaar = movie.release_date ? movie.release_date.substring(0, 4) : "-";
+                let poster = movie.poster_path;
+
+                if (!poster) {
+                    poster = "https://placehold.co/300x450?text=Geen afbeelding";
+                } else {
+                    poster = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${poster}`;
+                }
+
+                // Maak een card in een col
+                const col = document.createElement("div");
+                col.className = "col-md-3";
+
+                col.innerHTML = `
+                    <div class="card shadow-sm m-2">
+                        <img src="${poster}" class="card-img-top img-fluid" alt="${titel}">
+                        <div class="card-body">
+                            <h5 class="card-title">${titel}</h5>
+                            <p class="card-text">Jaar: ${jaar}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Voeg de card toe aan de resultaatdiv
+                divRes.appendChild(col);
+            });
+        };
+
+        knop.addEventListener("click", getData);
+    </script>
+
+
+</body>
+
+</html>

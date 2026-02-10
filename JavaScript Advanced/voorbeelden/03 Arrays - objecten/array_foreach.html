@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <p>Som van alle getallen in de array:</p>
+    <p id="resultaat"></p>
+
+    <script>
+        let som = 0, telop = 0;
+        let nummers = [49, 4, 36, 8, 12, 22, 10];
+
+        // Oude manier via een functie
+        nummers.forEach(mijnFunctie);
+
+        function mijnFunctie(item) {
+            som += item; // som = som + item
+        }
+
+        // korter via lambda expressions
+        nummers.forEach(item => telop += item);
+
+
+        document.getElementById("resultaat").innerHTML += '<div>Via functie: ' + som + '</div>';
+        document.getElementById("resultaat").innerHTML += '<div>Via lambda: ' + telop + '</div>';
+
+        // Wordt ook gebruikt om bijvoorbeeld ieder element apart te doorlopen...
+        let arrayLetters = ['a', 'b', 'c'];
+
+        arrayLetters.forEach(element => console.log(element));
+    </script>
+</body>
+
+</html>

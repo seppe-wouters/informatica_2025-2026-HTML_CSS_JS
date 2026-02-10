@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="#">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Map</title>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHLnrXSIvbNTjGKMT8v2ceovmF4po0Zlo&libraries=places"></script>
+
+  <style>
+    /* styles.css */
+    #weather {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #weather-icon {
+      margin-right: 20px;
+      font-size: 48px;
+      /* Increase the font size */
+    }
+
+    #weather-info {
+      text-align: center;
+    }
+
+    #temperature {
+      font-size: 24px;
+    }
+
+    #weather-description {
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    #min-max-temperature {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="weather">
+    <div id="weather-icon"></div>
+    <div id="weather-info">
+      <p id="temperature"></p>
+      <p id="weather-description"></p>
+      <p id="min-max-temperature"></p>
+    </div>
+  </div>
+
+  <div id="map" style="height: 600px; width: 100%"></div>
+
+  <script>
+    const minMaxTemperature = document.getElementById("min-max-temperature");
+    const weatherDescription = document.getElementById("weather-description");
+    const temperature = document.getElementById("temperature");
+    const weatherIcon = document.getElementById("weather-icon");
+    const divMap = document.getElementById("map");
+
+    // Functie om weer gegevens te vragen
+    fetchWeather = () => {
+      const lat = 51.213678;
+      const lng = 4.404739;
+
+      const apiKey = "4c4e7b6d2f3b3bb08edae6542c63e6e2"; // @@@@@@@@@@@  Replace with your actual API key @@@@@@@@@@@
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lng}&appid=${apiKey}`;
+
+      const xhr = new XMLHttpRequest();
+
+      // Maak de request
+      xhr.open("GET", apiUrl, true);
+
+      // Event listener voor load
+      xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 400) {
+          const response = JSON.parse(xhr.responseText);
+          console.log(response);
+          // We roepen de functie displayWeather aan om weer gegevens te weergeven
+          displayWeather(response);
+        } else {
+          console.log("Error fetching weather data:", xhr.statusText);
+        }
+      };
+
+      // Event listener voor error
+      xhr.onerror = function () {
+        console.log("Error fetching weather data:", xhr.statusText);
+      };
+
+      // Verzet de request
+      xhr.send();
+    }
+
+    // Functie om weer gegevens te weergeven in de UI
+    displayWeather = (weatherData) => {
+      weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png">`;
+      temperature.textContent = `Temperature: ${weatherData.main.temp}°C`;
+      weatherDescription.textContent = `Weather: ${weatherData.weather[0].main}`;
+
+      const minTemp = weatherData.main.temp_min;
+      const maxTemp = weatherData.main.temp_max;
+
+      minMaxTemperature.textContent = `Min Temp: ${minTemp}°C, Max Temp: ${maxTemp}°C`;
+    }
+
+    // We roepen de initMap functie aan om de kaart te initialiseren
+    document.addEventListener("DOMContentLoaded", fetchWeather);
+
+  </script>
+</body>
+
+</html>

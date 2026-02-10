@@ -1,12 +1,14 @@
 body {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    width: 100vw;
+    gap: 5px;
+    grid-template-columns: repeat(4,1fr);
 }
 
 div {
     background-color: lightgrey;
-    width: 100px;
-    height: 200px;
+    width: 20vw;
+    height: 300px
 }
 
 .selected {

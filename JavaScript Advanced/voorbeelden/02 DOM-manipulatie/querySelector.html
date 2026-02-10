@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector </title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <div class="card featured">
+        <h2 id="title">Product Titel</h2>
+        <p class="price">€ 19,99</p>
+        <p class="description">Dit is een <strong>mooie</strong> beschrijving.</p>
+        <button class="btn buy">Koop nu</button>
+    </div>
+
+
+    <script>
+        // 1. Opvragen via ID (zoals getElementById)
+        const title = document.querySelector("#title");
+        console.log(title.innerText);
+
+        // 2. Opvragen via class (zoals getElementsByClassName)
+        const price = document.querySelector(".price");
+        console.log(price.innerText);
+
+        // 3. Opvragen via HTML-tag (zoals getElementsByTagName)
+        const firstParagraph = document.querySelector("p");
+        console.log(firstParagraph.innerText);
+
+        // 4. Opvragen via gecombineerde CSS-selectors
+        const featuredCard = document.querySelector(".card.featured");
+        console.log(featuredCard);
+
+        // 5. Een element binnen een ander element selecteren
+        const buyButton = document.querySelector(".card .btn.buy");
+        console.log(buyButton.innerText);
+
+        // 6. Selectie van het eerste <strong> binnen description
+        const strongInsideDescription = document.querySelector(".description strong");
+        console.log(strongInsideDescription.innerText);
+    </script>
+</body>
+
+</html>

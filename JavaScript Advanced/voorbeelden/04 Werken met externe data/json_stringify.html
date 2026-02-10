@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON intro</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>JSON stringify()</h1>
+    <div id="divResult"></div>
+
+    <script>
+        // We hebben een JS-object
+        const autoObject = {
+            merk: "Toyota",
+            model: "Corolla",
+            jaar: 2022,
+            kleuren: ["rood", "blauw", "wit"],   // array van beschikbare kleuren
+            motor: {                             // genest object
+                type: "benzine",
+                vermogen: 132,
+                cilinders: 4
+            },
+            inschrijvingsdatum: "2022-01-01"
+        };
+
+        console.log(autoObject);
+
+        // Via de stringify methode maken we er een JSON string van
+        let auto = JSON.stringify(autoObject);
+
+        // Test in de console => string
+        console.log(auto);
+
+        let el = document.querySelector("#divResult").innerHTML = auto;
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON intro</title>
+    <link rel="shortcut icon" href="#" />
+</head>
+
+<body>
+    <h1>JSON parse()</h1>
+    <div id="divResult"></div>
+
+    <script>
+        const el = document.querySelector("#divResult");
+
+        // We ontvangen bijvoorbeeld een JSON string van de server....
+        const autoJSON =
+            '{"merk":"Toyota","model":"Corolla","jaar":2022,"kleuren":["rood","blauw","wit"],"motor":{"type":"benzine","vermogen":132,"cilinders":4},"inschrijvingsdatum":"2022-01-01"}';
+
+        // Test in de console
+        console.log(autoJSON);
+
+        // Via de parse methode maken we er een JS-object van
+        let auto = JSON.parse(autoJSON);
+
+        // Test in de console
+        console.log(auto);
+
+        // Individuele properties tonen.
+        console.log(auto.merk); // Toyota
+        console.log(auto.model); // Corolla
+        console.log(auto.kleuren[1]); // blauw
+        console.log(auto.motor.type); // benzine
+
+        // Oplijsten van kleuren
+        auto.kleuren.forEach(kleur => {
+            el.innerHTML += "<div>" + kleur + "</div>";
+        })
+    </script>
+</body>
+
+</html>

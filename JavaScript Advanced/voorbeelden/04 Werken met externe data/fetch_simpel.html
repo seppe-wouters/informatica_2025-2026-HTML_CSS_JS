@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voorbeeld Fetch </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Eenvoudig fetch voorbeeld</h1>
+                    <p>Kijk in de console voor het resultaat van de fetch data.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        const api_key = "5a0950322863620957b23825635310f7";
+        let api_url = "https://api.themoviedb.org/3/search/movie?";
+        // const options = { method: 'GET', headers: { accept: 'application/json' } };
+
+        // API url opbouwen met zoekterm
+        api_url += `api_key=${api_key}&language=nl-BE&query=Jaws`;
+
+        // Fetch met de zoekterm "Jaws"
+        // fetch(api_url, options)
+        fetch(api_url)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(err => console.log("Error: ", err));
+    </script>
+
+</body>
+
+</html>

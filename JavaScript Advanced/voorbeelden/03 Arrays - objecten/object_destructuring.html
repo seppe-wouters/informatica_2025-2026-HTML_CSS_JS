@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten: object destructuring</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Object destructuring</h1>
+    <div id="divResult"></div>
+
+    <script>
+        const res = document.querySelector("#divResult");
+
+        // Voorbeelden van een leeg object.
+        let leegObject = {};
+        console.log(leegObject);
+
+        // Voorbeelden van object met 3 properties.
+        let auto = {
+            merk: "Toyota",
+            model: "Corolla",
+            jaar: 2022
+        };
+
+        // Basis destructuring
+        const { merk, model, jaar } = auto;
+
+        // Vul een div met de eigenschappen van een object via template literals
+        res.innerHTML = `<div><strong>Basis destructuring</strong></div>
+                        <div> Merk: ${merk}</div>
+                        <div>Model: ${model}</div>
+                        <div>Jaar: ${jaar}</div>`;
+
+
+        // Destructuring met hernoemen
+        const { merk: autoMerk, model: autoModel, jaar: autoJaar } = auto;
+
+        // Vul een div met de eigenschappen van een object via template literals
+        res.innerHTML += `<div><strong>Destructuring met alias</strong></div>
+                        <div> Merk: ${autoMerk}</div>
+                        <div>Model: ${autoModel}</div>
+                        <div>Jaar: ${autoJaar}</div>`;
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>queryselector vs getelementbyid</title>
+    <link rel="shortcut icon" href="#">
+
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        .voorbeeld {
+            margin-bottom: 35px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        .vak {
+            padding: 10px;
+            margin: 5px 0;
+            background: #eef;
+            border: 1px solid #99c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Selectors – Overzicht</h1>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- 1. getElementById -->
+    <!-- ---------------------------------------------------- -->
+    <div class="voorbeeld">
+        <h2>1. getElementById()</h2>
+
+        <div id="vak1" class="vak">Ik ben #vak1</div>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- 2. getElementsByTagName -->
+    <!-- ---------------------------------------------------- -->
+    <div class="voorbeeld">
+        <h2>2. getElementsByTagName()</h2>
+
+        <p class="vak">Paragraaf A</p>
+        <p class="vak">Paragraaf B</p>
+    </div>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- 3. getElementsByClassName -->
+    <!-- ---------------------------------------------------- -->
+    <div class="voorbeeld">
+        <h2>3. getElementsByClassName()</h2>
+
+        <div class="vak blok">Blok 1</div>
+        <div class="vak blok">Blok 2</div>
+        <div class="vak blok">Blok 3</div>
+    </div>
+
+
+    <script>
+        // 1. getElementById
+        const idElement = document.getElementById("vak1");
+        idElement.style.backgroundColor = "#cde";
+        console.log("ID:", idElement.innerText);
+
+        // 2. getElementsByTagName
+        const pTags = document.getElementsByTagName("p");
+        pTags[0].style.backgroundColor = "#fde";
+        pTags[1].style.backgroundColor = "#fed";
+        console.log("TAG:", pTags);
+
+        // 3. getElementsByClassName 
+        const blokken = document.getElementsByClassName("blok");
+        for (let i = 0; i < blokken.length; i++) {
+            blokken[i].style.border = "2px solid #a00";
+        }
+        console.log("CLASS:", blokken);
+    </script>
+
+
+</body>
+
+</html>

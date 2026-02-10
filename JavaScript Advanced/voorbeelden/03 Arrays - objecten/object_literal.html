@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objecten: object literal</title>
+    <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+    <h1>Object literal</h1>
+    <div id="divResult"></div>
+
+    <script>
+        const res = document.querySelector("#divResult");
+
+        // Voorbeelden van een leeg object.
+        let leegObject = {};
+        console.log(leegObject);
+
+        // Voorbeelden van object met 3 properties.
+        let auto = {
+            merk: "Toyota",
+            model: "Corolla",
+            jaar: 2022
+        };
+
+        console.log(auto);
+
+        // Vul een div met de eigenschappen van een object via template literals
+        res.innerHTML = `<div> Merk: ${auto.merk}</div>
+                        <div>Model: ${auto.model}</div>
+                        <div>Jaar: ${auto.jaar}</div>`;
+    </script>
+
+</body>
+
+</html>

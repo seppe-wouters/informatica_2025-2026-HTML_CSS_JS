@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+img {
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 20px;
+}

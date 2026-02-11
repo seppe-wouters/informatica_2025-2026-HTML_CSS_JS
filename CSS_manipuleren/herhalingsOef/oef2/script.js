@@ -24,5 +24,7 @@ btnShowInfo.addEventListener("click", () => {
 })
 
 btnRemoveWeapon.addEventListener("click", () => {
-    character.removeAttribute("data-weapon")
+    if (character.hasAttribute("data-weapon")) {
+        character.removeAttribute("data-weapon")
+    }
 })

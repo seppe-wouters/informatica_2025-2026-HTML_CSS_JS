@@ -1,0 +1,8 @@
+.selected {
+    background-color: #222;
+    color: white;
+}
+
+.highlight {
+    border: 2px solid red;
+}

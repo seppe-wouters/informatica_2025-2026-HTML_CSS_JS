@@ -5,14 +5,21 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         checkAndAddClasses(button)
     })
+
+    button.addEventListener("mouseenter", () => {
+        button.classList.add("highlight")
+    })
+
+    button.addEventListener("mouseleave", () => {
+        button.classList.remove("highlight")
+    })
 });
 
 let aantalSelected = 0
 
 function checkAndAddClasses(knop) {
-    if (knop.classList.contains("selected") && knop.classList.contains("highlight")) {
+    if (knop.classList.contains("selected")) {
         knop.classList.remove("selected")
-        knop.classList.remove("highlight")
         aantalSelected--
         alertEl.innerHTML = `aantal geselecteerd: ${aantalSelected}`
     } else {
@@ -21,7 +28,6 @@ function checkAndAddClasses(knop) {
         } else {
             aantalSelected++
             knop.classList.add("selected")
-            knop.classList.add("highlight")
             alertEl.innerHTML = `aantal geselecteerd: ${aantalSelected}`
         }
     }

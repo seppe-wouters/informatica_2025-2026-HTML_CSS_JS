@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #101428;
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1e2445;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mode-focus {
+    border: 2px solid #4da6ff;
+}
+
+.mode-break {
+    border: 2px solid #4dffb8;
+}
+
+.mode-blocked {
+    border: 2px solid #ff4d6d;
+}
+
+.selected {
+    background-color: #4da6ff;
+}
+
+.blocked {
+    background-color: #ff4d6d;
+    text-decoration: line-through;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.dark .card{
+    background-color: rgb(31, 30, 30);
+}

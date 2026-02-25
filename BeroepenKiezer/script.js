@@ -124,3 +124,4 @@ document.querySelector("#Reset").addEventListener("click", () => {
     selectPlannen.value = "GraagPlannen"
     btnToonBeroep.classList.remove("clicked")
 })
+ 

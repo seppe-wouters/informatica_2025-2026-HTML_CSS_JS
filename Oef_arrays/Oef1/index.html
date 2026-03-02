@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        let artiesten = ["artiest1", "artiest2", "artiest3", "artiest4", "artiest5"]
+        console.log(artiesten[0])
+        divEl.innerHTML += `<p>${artiesten[artiesten.length-1]}</p>`
+        divEl.innerHTML += artiesten.length
+    </script>
+</body>
+</html>

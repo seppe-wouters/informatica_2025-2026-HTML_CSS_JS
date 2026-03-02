@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const punten = [12, 8, 15, 9, 17, 6];
+        let som = 0
+
+        punten.forEach(punt => divEl.innerHTML += `<p>${punt}</p>`);
+        punten.map(punt => som += punt)
+        divEl.innerHTML += `<p>som: ${som}</p>`
+        divEl.innerHTML += `<p>gem: ${som/punten.length}</p>`
+    </script>
+</body>
+</html>

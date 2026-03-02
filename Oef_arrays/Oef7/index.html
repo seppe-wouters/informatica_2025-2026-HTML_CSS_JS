@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const gewichten = [40, 50, 52, 60, 45];
+
+        let newGewichten = gewichten.map(item => item += 2.5)
+        newGewichten.forEach(item => divEl.innerHTML += `<p>${item}</p>`)
+        
+        divEl.innerHTML += "<br>filter:"
+
+        let filteredGewichten = gewichten.filter(item => item >= 50)
+        filteredGewichten.forEach(item => divEl.innerHTML += `<p>${item}</p>`)
+    </script>
+</body>
+</html>

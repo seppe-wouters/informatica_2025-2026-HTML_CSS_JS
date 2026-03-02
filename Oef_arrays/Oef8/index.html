@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const prijzen = [4500, 12000, 8000, 22000, 6000];
+
+        divEl.innerHTML += "prijzen minder dan 10k"
+        let goedkoop = prijzen.filter(item => item <= 10000)
+        goedkoop.forEach((item, key) => divEl.innerHTML += `<p>${key + 1} - ${item}</p>`)
+        divEl.innerHTML += "<br>"
+        
+        divEl.innerHTML += "incl. btw"
+        let prijzenBTW = prijzen.map(item => item * 1.21)
+        prijzenBTW.forEach((item, key) => divEl.innerHTML += `<p>${key + 1} - ${item}</p>`)
+        
+        divEl.innerHTML += "<br>prijzen minder dan 10k incl. btw"
+        let goedkoop2 = prijzenBTW.filter(item => item <= 10000)
+        goedkoop2.forEach((item,key) => divEl.innerHTML += `<p>${key + 1} - ${item}</p>`)
+        
+    </script>
+</body>
+</html>

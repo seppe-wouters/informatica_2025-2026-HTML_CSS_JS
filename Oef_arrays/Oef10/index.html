@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const producten = [
+            { naam: "Nike Air", prijs: 120 },
+            { naam: "Adidas Hoodie", prijs: 80 },
+            { naam: "iPhone case", prijs: 25 },
+            { naam: "PS5 controller", prijs: 70 }
+        ];
+
+        divEl.innerHTML += `<p>productnamen:</p>`;
+        producten.forEach((item, key) => divEl.innerHTML += `<p>${key + 1} - ${item.naam}</p>`);
+
+        divEl.innerHTML += "<br><p>Producten onder 100:</p>";
+        let producten100 = producten.filter(item => item.prijs <= 100);
+        producten100.forEach((item, key) => divEl.innerHTML += `<p>${key + 1} - ${item.naam}</p>`);
+
+        divEl.innerHTML += "<br><p>Producten incl 10%:</p>";
+        let prijzenIncl = producten.map(item => item.prijs * 0.9);
+        prijzenIncl.forEach((p, i) => {
+            divEl.innerHTML += `<p>${i + 1} - €${p.toFixed(2)}</p>`;
+        });
+    </script>
+</body>
+
+</html>

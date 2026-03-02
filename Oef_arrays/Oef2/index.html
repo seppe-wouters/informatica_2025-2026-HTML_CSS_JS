@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        let games = ["game1", "game2", "game3", "game4", "game5", "game6"]
+
+        games[games.indexOf("game3")] = "game67"
+        games.push("gamesidklaatste")
+        games.pop(games[games.length - 1])
+
+        games.forEach(game => {
+            divEl.innerHTML += `<p>${game}</p>`
+        });
+    </script>
+</body>
+
+</html>

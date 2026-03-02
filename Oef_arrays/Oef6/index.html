@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        let bericht = "brb idk lol asap"
+
+        let array = bericht.split(" ")
+        array.forEach(item => {
+            divEl.innerHTML += `<p>${item}</p>`
+        });
+        divEl.innerHTML += `<p>${array.join(" ")}</p>`
+    </script>
+</body>
+</html>

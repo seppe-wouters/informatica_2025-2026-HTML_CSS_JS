@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        let playlist = ["Blinding Lights", "As It Was", "Believer", "Starboy"];
+
+        divEl.innerHTML += `<p>gesorteerd:</p>`
+        playlist.sort().map(item => divEl.innerHTML += `<p>${item}</p>`)
+        divEl.innerHTML += "<br>"
+        divEl.innerHTML += `<p>Omgekeerd gesorteerd:</p>`
+        playlist.sort().reverse().map(item => divEl.innerHTML += `<p>${item}</p>`)
+        divEl.innerHTML += "<br>"
+        divEl.innerHTML += `<p>één string van gescheiden door " | "</p>`
+        divEl.innerHTML += `<p>${playlist.join(" | ")}</p>`
+        
+        
+    </script>
+</body>
+</html>

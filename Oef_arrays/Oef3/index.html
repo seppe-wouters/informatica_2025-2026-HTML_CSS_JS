@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const lineup = ["Fred again", "Oscar and the Wolf", "Charlotte de Witte", "Pommelien Thijs"];
+
+        divEl.innerHTML += "<p>For:</p>"
+        for (let index = 0; index < lineup.length; index++) {
+            divEl.innerHTML += `<p>${lineup[index]}</p>`
+        }
+        
+        divEl.innerHTML += "<br>"
+        divEl.innerHTML += "<p>Foreach:</p>"
+        lineup.forEach(item => {
+            divEl.innerHTML += `<p>${item}</p>`
+        });
+    </script>
+</body>
+
+</html>

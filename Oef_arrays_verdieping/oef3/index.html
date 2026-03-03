@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const films = ["Dune", "Barbie", "Oppenheimer", "Spider-Man"];
+
+        films.forEach(film => {
+            divEl.innerHTML += `${film}<br>`;
+        });
+
+        divEl.innerHTML += "<br>";
+        films.forEach((film, index) => {
+            divEl.innerHTML += `${index + 1}) ${film}<br>`;
+        });
+
+        divEl.innerHTML += "<br>";
+        films.forEach(film => {
+            if (film.length > 6) {
+                divEl.innerHTML += `${film}<br>`;
+            }
+        });
+    </script>
+</body>
+
+</html>

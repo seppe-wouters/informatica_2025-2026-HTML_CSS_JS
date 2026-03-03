@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+
+        let snacks = ["snack1", "snack2", "snack3", "snack4", "snack5"]
+        console.log(snacks[0])
+
+        divEl.innerHTML += `<p>laatste el: ${snacks[snacks.length - 1]}</p>`
+        divEl.innerHTML += `<p>aantal snacks: ${snacks.length}</p>`
+
+        snacks.push("snack6")
+
+        const removedSnack = snacks.pop()
+        divEl.innerHTML += `<p>verwijderde snack: ${removedSnack}</p>`
+    </script>
+</body>
+
+</html>

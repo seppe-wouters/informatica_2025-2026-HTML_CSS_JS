@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divel = document.querySelector("div")
+        const chat = ["nice", "lol", "stom", "gg", "stom", "bruh", "stom"];
+
+        const tel = chat.filter(woord => woord === "stom").length;
+        divel.textContent = `'stom' komt ${tel} keer voor.`;
+
+        const cleanChat = chat.reduce((acc, woord) => {
+            acc.push(woord === "stom" ? "***" : woord);
+            return acc;
+        }, []);
+
+        divel.innerHTML += `<br><p>${cleanChat.join(" | ")}</p>`;
+        console.log(cleanChat);
+    </script>
+</body>
+</html>

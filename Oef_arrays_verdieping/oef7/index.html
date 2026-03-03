@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divel = document.querySelector("div")
+
+        const cart = ["brood", "melk", "melk", "pasta", "brood", "chips"];
+        const uniqueCart = [];
+
+        cart.forEach(product => {
+            if (!uniqueCart.includes(product)) {
+                uniqueCart.push(product);
+            }
+        });
+
+        let html = "<ol>";
+        uniqueCart.forEach(product => {
+            html += `<li>${product}</li>`;
+        });
+        html += "</ol>";
+
+        divel.innerHTML = html;
+    </script>
+</body>
+</html>

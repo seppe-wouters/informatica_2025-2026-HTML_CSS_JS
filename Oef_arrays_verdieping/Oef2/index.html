@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+
+        const leerlingen = ["leerling1", "leerling2", "leerling3", "leerling4", "leerling5", "leerling6"];
+
+        leerlingen[1] = "leerling7";
+        divEl.innerHTML += `<p>2de leerling: ${leerlingen[1]}</p>`
+        divEl.innerHTML += `<p>Array na stap 1: ${leerlingen}</p><br>`
+
+        leerlingen.splice(0, 0, "leerling8");
+        divEl.innerHTML += `<p>1ste leerling: ${leerlingen[0]}</p>`
+        divEl.innerHTML += `<p>Array na stap 2: ${leerlingen}</p><br>`
+
+        leerlingen.pop(leerlingen.length - 1);
+        divEl.innerHTML += `<p>laatste leerling: ${leerlingen[leerlingen.length - 1]}</p>`
+        divEl.innerHTML += `<p>Array na stap 3: ${leerlingen}</p><br>`
+
+    </script>
+</body>
+
+</html>

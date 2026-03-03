@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divel = document.querySelector("div")
+        const punten = [12, 8, 15, 9, 17, 6, 14];
+
+        punten.sort().reverse();
+
+        divel.innerHTML = "<h2>Top 3 punten:</h2>";
+        punten.slice(0, 3).forEach((punt, index) => {
+            divel.innerHTML += `<p>${index + 1}. ${punt} punten</p>`;
+        });
+    </script>
+</body>
+</html>

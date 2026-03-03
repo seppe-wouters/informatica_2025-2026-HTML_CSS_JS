@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+
+        const scores = [14, 9, 17, 6, 11, 18, 7];
+
+        let som = 0;
+        scores.forEach(score => som += score);
+        console.log("Som:", som);
+
+        const gem = som / scores.length;
+        console.log("Gemiddelde:", gem);
+
+        let onvoldoende = 0;
+        scores.forEach(score => {
+            if (score < 10) onvoldoende++;
+        });
+        console.log("Onvoldoende scores:", onvoldoende);
+
+        const maxScore = Math.max(...scores);
+        console.log("Hoogste score:", maxScore);
+
+        const minScore = Math.min(...scores);
+        console.log("Laagste score:", minScore);
+
+        divEl.textContent = `Som: ${som}, Gemiddelde: ${gem.toFixed(2)}, Onvoldoende: ${onvoldoende}, Max: ${maxScore}, Min: ${minScore}`;
+    </script>
+</body>
+</html>

@@ -37,8 +37,7 @@
         filterSciFi.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
 
         divEl.innerHTML += "<br><p>Array met enkel titels</p>"
-        const titels = []
-        films.forEach(film => titels.push(film.titel))
+        const titels = films.map(film => film.titel)
         titels.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film}</p>`)
 
         divEl.innerHTML += "<br><p>Sorteer op rating</p>"

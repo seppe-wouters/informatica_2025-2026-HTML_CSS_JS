@@ -26,9 +26,12 @@
         producten100.forEach((item, key) => divEl.innerHTML += `<p>${key + 1} - ${item.naam}</p>`);
 
         divEl.innerHTML += "<br><p>Producten incl 10%:</p>";
-        let prijzenIncl = producten.map(item => item.prijs * 0.9);
+        let prijzenIncl = [] 
+        producten.forEach(item => {
+            prijzenIncl.push({naam: item.naam, prijs: item.prijs * 0.9})
+        });
         prijzenIncl.forEach((p, i) => {
-            divEl.innerHTML += `<p>${i + 1} - €${p.toFixed(2)}</p>`;
+            divEl.innerHTML += `<p>${i + 1} - ${p.naam} - €${(p.prijs).toFixed(2)}</p>`;
         });
 
         divEl.innerHTML += "<br><p>Totaal prijs</p>"

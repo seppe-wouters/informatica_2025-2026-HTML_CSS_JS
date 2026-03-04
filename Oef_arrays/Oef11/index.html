@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div></div>
     <script>
         const divEl = document.querySelector("div")
+        const likes = [120, 340, 89, 560, 230, 150];
+
+        likes.sort((a, b) => a - b)
+        divEl.innerHTML += `<br><p>hoogste/laagste waarden</p>`
+        divEl.innerHTML += `<p>hoogste likes: ${likes[0]}</p>`
+        divEl.innerHTML += `<p>laagste likes: ${likes[likes.length - 1]}</p>`
+
+
+        divEl.innerHTML += `<br><p>Gemiddelde waarde van de array</p>`
+        let tot = 0
+        likes.forEach(item => tot += item)
+        divEl.innerHTML += `<p>gemiddelde: ${(tot / likes.length).toFixed(2)}</p>`
+
+        divEl.innerHTML += `<br><p>Filter meer dan 200 likes</p>`
+        let filtered = likes.filter(item => item >= 200)
+        filtered.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i}</p>`)
+
+        divEl.innerHTML += `<br><p>Met catagorieen</p>`
+        let viral = likes.filter(item => item >= 500)
+        let populair = likes.filter(item => item >= 200 && item < 500)
+        let normaal = likes.filter(item => item < 200)
+
+        divEl.innerHTML += `<p>viral catagorie:</p>`
+        viral.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i}</p>`)
+        divEl.innerHTML += `<p>populair catagorie:</p>`
+        populair.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i}</p>`)
+        divEl.innerHTML += `<p>normaal catagorie:</p>`
+        normaal.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i}</p>`)
+
     </script>
 </body>
+
 </html>

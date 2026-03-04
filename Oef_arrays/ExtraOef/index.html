@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        const divEl = document.querySelector("div")
+        const films = [
+            { titel: "Inception", genre: "Sci-Fi", rating: 8.8 },
+            { titel: "Barbie", genre: "Comedy", rating: 7.2 },
+            { titel: "Oppenheimer", genre: "Drama", rating: 8.5 },
+            { titel: "Fast X", genre: "Action", rating: 5.9 }
+        ];
+
+        divEl.innerHTML += "<br><p>Film met rating 8 of hoger</p>"
+        const rating8 = films.filter(film => film.rating >= 8)
+        rating8.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>   `)
+
+        divEl.innerHTML += "<br><p>Filter films op basis van genre</p>"
+        divEl.innerHTML += "<p>Action:</p>"
+        const filterAction = films.filter(film => film.genre == "Action")
+        filterAction.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
+        divEl.innerHTML += "<p>Drama:</p>"
+        const filterDrama = films.filter(film => film.genre == "Drama")
+        filterDrama.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
+        divEl.innerHTML += "<p>Comedy:</p>"
+        const filterComedy = films.filter(film => film.genre == "Comedy")
+        filterComedy.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
+        divEl.innerHTML += "<p>Sci-Fi:</p>"
+        const filterSciFi = films.filter(film => film.genre == "Sci-Fi")
+        filterSciFi.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
+
+        divEl.innerHTML += "<br><p>Array met enkel titels</p>"
+        const titels = []
+        films.forEach(film => titels.push(film.titel))
+        titels.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film}</p>`)
+
+        divEl.innerHTML += "<br><p>Sorteer op rating</p>"
+        const sortedRating = films.sort((a, b) => b.rating - a.rating)
+        sortedRating.forEach((film, k) => divEl.innerHTML += `<p> ${k + 1} - ${film.titel}, ${film.genre} (${film.rating})</p>`)
+    </script>
+</body>
+
+</html>

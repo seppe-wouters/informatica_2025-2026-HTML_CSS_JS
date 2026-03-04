@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div></div>
     <script>
         const divEl = document.querySelector("div")
+        const studenten = [
+            { naam: "Emma", punt: 14 },
+            { naam: "Lucas", punt: 9 },
+            { naam: "Noah", punt: 17 },
+            { naam: "Lotte", punt: 11 }
+        ];
+
+        const geslaagd = studenten.filter(item => item.punt >= 10)
+
+        divEl.innerHTML += "<br><p>Geslaagde studenten</p>"
+        geslaagd.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i.naam} (${Number(i.punt)})</p>`)
+
+        divEl.innerHTML += "<br><p>sorteer hoog naar laag</p>"
+        const sorted = geslaagd.sort((a, b) => b.punt - a.punt)
+        sorted.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i.naam} (${Number(i.punt)})</p>`)
+
+        divEl.innerHTML += "<br><p>array met namen van enkel de geslaagde</p>"
+        let NamenGeslaagd = []
+        sorted.forEach(i => NamenGeslaagd.push(i.naam))
+        NamenGeslaagd.forEach((i, k) => divEl.innerHTML += `<p>${k + 1} - ${i}</p>`)
+
+        NamenGeslaagd.forEach((i, k) => console.log(`${k + 1} - ${i}`))
+
     </script>
 </body>
+
 </html>

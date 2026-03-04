@@ -30,6 +30,13 @@
         prijzenIncl.forEach((p, i) => {
             divEl.innerHTML += `<p>${i + 1} - €${p.toFixed(2)}</p>`;
         });
+
+        divEl.innerHTML += "<br><p>Totaal prijs</p>"
+        let tot = 0
+        producten.forEach(i => {
+            tot += parseInt(i.prijs)
+        });
+        divEl.innerHTML += `<p>Totaal: €${tot}`
     </script>
 </body>
 

@@ -40,8 +40,8 @@ btns.forEach(btn => {
         }
         winkelKar.innerHTML = ""
         aantal++
+        spanAantal.innerHTML = aantal
         kar.forEach(item => {
-            spanAantal.innerHTML = aantal
             winkelKar.innerHTML += `<p>${item.naam} - ${item.aantal} (&euro;${(item.prijs)*(item.aantal)})</p>`
         });
     })

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Game Collectie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container achtergrond shadow-sm">
+        <h1>Mijn game-collectie</h1>
+        <form id="form" class="d-flex flex-column border p-2 mb-3 rounded shadow-sm bg-white">
+            <label>Naam: </label>
+            <input type="text" id="inputNaam" required>
+            <label>Platform: </label>
+            <select id="selectPlatform">
+                <option value="PS5">PS5</option>
+                <option value="xbox">xbox</option>
+                <option value="PC">PC</option>
+                <option value="Switch">Switch</option>
+            </select>
+            <label>Genre: </label>
+            <select id="selectGenre">
+                <option value="RPG">RPG</option>
+                <option value="FPS">FPS</option>
+                <option value="Strategy">Strategy</option>
+                <option value="Sport">Sport</option>
+            </select>
+            <div>
+                <input type="checkbox" id="checkUitgespeeld" class="align-self-start ms-2 mt-2">
+                <label>Uitgespeeld</label>
+            </div>
+            <input type="submit" class="w-25 align-self-center mt-2 mb-2">
+        </form>
+        <div class="row d-flex justify-content-center" id="divEl">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body> 
+
+</html>

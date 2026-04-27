@@ -1,0 +1,6 @@
+/* achtergrond kleur aangepast voor de 2 witte balken te krijgen */
+#achtergrond {
+    height: 100vh;
+    background-color: rgb(238, 237, 237);
+    border-radius: 5px;
+}

@@ -1,0 +1,22 @@
+body{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: teal;
+    border-radius: 50%;
+    border: solid rgb(1, 110, 110) 1px;
+    height: 50px;
+    width: 50px;
+    color: white;
+
+    animation: pulse 2s ease-in-out 0s infinite alternate forwards;
+}
+
+@keyframes pulse {
+    from {transform: scale(1);}
+    to {transform: scale(3) rotate(5turn);}
+}

@@ -1,0 +1,25 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    height: 50px;
+    width: 50px;
+    background-color: maroon;
+
+    animation: spin 2s linear infinite forwards, fade 4s ease-in-out infinite forwards alternate;
+}
+
+@keyframes spin {
+    from {}
+    to {transform: rotate(1turn);}
+}
+
+@keyframes fade {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}

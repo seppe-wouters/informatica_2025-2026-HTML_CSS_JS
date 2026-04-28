@@ -1,0 +1,20 @@
+body {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    border: solid black 2px;
+
+    animation: rotate360 1s linear 0s infinite normal forwards;
+}
+
+@keyframes rotate360 {
+    from {}
+    to {transform: rotate(1turn);}
+}

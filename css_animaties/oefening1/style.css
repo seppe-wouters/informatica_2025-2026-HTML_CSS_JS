@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    border: green 2px solid;
+
+    transition-property: background-color, transform, border-radius;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+button:hover {
+    background-color: black;
+    border-radius: 0px;
+    transform: rotate(20turn) scale(5);
+}

@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: lightgray;
+    border: black solid 2px;
+
+    transition-property: background-color, transform;
+    transition-duration: 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;
+}
+
+div:hover {
+    background-color: gray;
+    transform: rotate(5turn);
+}

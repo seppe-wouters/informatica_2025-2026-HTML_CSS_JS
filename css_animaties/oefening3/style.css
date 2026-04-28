@@ -1,0 +1,34 @@
+body {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: darkgreen;
+    border: black 2px solid;
+
+    transition-property: transform;
+    transition-duration: 1.3s;
+}
+
+#div1:hover{
+    transform: scale(1.2);
+}
+
+#div2:hover{
+    transform: rotate(2turn) scale(1.2);
+}
+
+#div3:hover{
+    transform: rotate3d(1,1,1,360deg) scale(1.2);
+}
+
+#div4:hover{
+    transform:scale(1.2) scaleY(30);
+}

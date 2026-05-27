@@ -1,0 +1,11 @@
+#form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 5px;
+}
+
+#prijzen {
+    margin-top: 20px;
+}

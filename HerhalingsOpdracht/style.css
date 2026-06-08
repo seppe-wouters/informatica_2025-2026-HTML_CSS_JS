@@ -1,0 +1,11 @@
+body {
+    background: linear-gradient(rgba(236, 234, 234, 0.753), white);
+}
+
+#auth-forms input {
+    max-width: 220px;
+}
+
+#main-app {
+    display: none;
+}
